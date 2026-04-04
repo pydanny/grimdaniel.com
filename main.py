@@ -10,8 +10,9 @@ from functools import partial
 markdown = partial(mistletoe.markdown)
 
 app = air.Air()
+jinja = air.JinjaRenderer(directory="templates")
 
-# TODO add theme colors for muCss
+# TODO add theme color enumerator for muCss
 
 
 def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: bool = False, **kwargs) -> air.Html | air.Children:
@@ -95,8 +96,17 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
         data_theme = 'dark' if force_dark_mode else ''
     )
 
+
 @app.page
-def index():
+def index(request: air.Request):
+    return jinja(
+        request,
+        name="index.html"
+    )
+
+
+@app.page
+def everyone_dies():
     title = 'Grim Daniel'
     description = 'The official website for author Daniel Roy Greenfeld'
     return mucss(
@@ -131,6 +141,8 @@ def index():
 
         force_dark_mode=True
     )
+
+
 
 redirects = json.loads(pathlib.Path("redirects.json").read_text())
 

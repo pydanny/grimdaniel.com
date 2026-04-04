@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anduril Harkness — Everyone Dies</title>
+    <meta name="description" content="Seven companions walk a path no one survives. Everyone Dies — a grimdark fantasy by Anduril Harkness. Get your free advance copy.">
+    <meta property="og:title" content="Everyone Dies — Anduril Harkness">
+    <meta property="og:description" content="Seven companions walk a path no one survives. Get your free advance review copy.">
+    <meta property="og:image" content="https://andurilharkness.com/static/images/everyone-dies.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andurilharkness.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blood: #8b1a1a;
+            --blood-bright: #c62828;
+            --blood-glow: #e53935;
+            --bone: #d4c5a9;
+            --bone-dim: #a89b7e;
+            --parchment: #c4b08f;
+            --charcoal: #1a1714;
+            --obsidian: #0d0b09;
+            --ash: #2a2520;
+            --smoke: #3d3630;
+            --ember: rgba(198, 40, 40, 0.6);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: var(--bone);
+            font-family: 'Crimson Pro', Georgia, serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- ATMOSPHERIC BACKGROUND ---- */
+        .atmosphere {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .atmosphere::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(139, 26, 26, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(139, 26, 26, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 100%, rgba(139, 26, 26, 0.1) 0%, transparent 40%);
+        }
+
+        .atmosphere::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at center, transparent 50%, var(--obsidian) 100%);
+        }
+
+        /* Noise texture overlay */
+        .grain {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* ---- EMBERS (floating particles) ---- */
+        .embers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .ember {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--blood-bright);
+            border-radius: 50%;
+            box-shadow: 0 0 6px 2px var(--ember), 0 0 12px 4px rgba(198, 40, 40, 0.3);
+            animation: float-up linear infinite;
+            opacity: 0;
+        }
+
+        .ember:nth-child(1) { left: 10%; animation-duration: 14s; animation-delay: 0s; }
+        .ember:nth-child(2) { left: 25%; animation-duration: 18s; animation-delay: 3s; }
+        .ember:nth-child(3) { left: 45%; animation-duration: 16s; animation-delay: 7s; }
+        .ember:nth-child(4) { left: 65%; animation-duration: 20s; animation-delay: 2s; }
+        .ember:nth-child(5) { left: 80%; animation-duration: 15s; animation-delay: 5s; }
+        .ember:nth-child(6) { left: 35%; animation-duration: 22s; animation-delay: 9s; }
+        .ember:nth-child(7) { left: 55%; animation-duration: 17s; animation-delay: 11s; }
+        .ember:nth-child(8) { left: 90%; animation-duration: 19s; animation-delay: 1s; }
+        .ember:nth-child(9) { left: 5%; animation-duration: 21s; animation-delay: 6s; }
+        .ember:nth-child(10) { left: 72%; animation-duration: 16s; animation-delay: 4s; }
+
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+                transform: translateY(90vh) translateX(10px) scale(1);
+            }
+            50% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(-20px) scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        /* ---- MAIN CONTENT ---- */
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* ---- HERO SECTION ---- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--blood), transparent);
+        }
+
+        .author-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 400;
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--bone-dim);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fade-in 1.5s ease 0.3s forwards;
+        }
+
+        .book-title {
+            font-family: 'Cinzel Decorative', 'Cinzel', serif;
+            font-weight: 900;
+            font-size: clamp(3rem, 8vw, 7rem);
+            line-height: 0.95;
+            color: var(--bone);
+            text-shadow:
+                0 0 40px rgba(139, 26, 26, 0.4),
+                0 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.3em;
+            opacity: 0;
+            animation: title-reveal 2s ease 0.6s forwards;
+            position: relative;
+        }
+
+        .book-title .dies {
+            color: var(--blood-bright);
+            text-shadow:
+                0 0 60px rgba(198, 40, 40, 0.6),
+                0 0 120px rgba(198, 40, 40, 0.3),
+                0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .tagline {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            color: var(--parchment);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            opacity: 0;
+            animation: fade-in 1.5s ease 1.2s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fade-in 1.5s ease 1.8s forwards;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes title-reveal {
+            from { opacity: 0; transform: translateY(20px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* ---- SCROLL INDICATOR ---- */
+        .scroll-hint {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            animation: fade-in 1s ease 2.5s forwards;
+        }
+
+        .scroll-hint span {
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--bone-dim);
+        }
+
+        .scroll-arrow {
+            width: 5px;
+            height: 30px;
+            background: linear-gradient(to bottom, var(--blood), transparent);
+            position: relative;
+            animation: pulse-down 2s ease infinite;
+        }
+        .scroll-link {
+            color: inherit;
+            text-decoration: underline;
+        }   
+
+        @keyframes pulse-down {
+            0%, 100% { opacity: 0.4; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.3); }
+        }
+
+        /* ---- BOOK SECTION ---- */
+        .book-section {
+            padding: 6rem 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cover-container {
+            position: relative;
+            justify-self: center;
+        }
+
+        .cover-container::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 1px solid rgba(139, 26, 26, 0.3);
+            pointer-events: none;
+        }
+
+        .cover-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.8),
+                0 0 80px rgba(139, 26, 26, 0.15);
+            pointer-events: none;
+        }
+
+        .cover-img {
+            display: block;
+            max-width: 100%;
+            width: 360px;
+            height: auto;
+        }
+
+        .book-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--blood-bright);
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(139, 26, 26, 0.3);
+        }
+
+        .blurb {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--bone);
+        }
+
+        .pub-date {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: var(--bone-dim);
+        }
+
+        .pub-date strong {
+            color: var(--bone);
+            font-weight: 700;
+        }
+
+        .format-badges {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .format-badge {
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            padding: 0.4em 1em;
+            border: 1px solid var(--smoke);
+            color: var(--bone-dim);
+        }
+
+        /* ---- THE DOOMED (Characters) ---- */
+        .doomed-section {
+            padding: 6rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .doomed-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--blood), transparent);
+        }
+
+        .doomed-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--blood), transparent);
+        }
+
+        .doomed-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--bone);
+            margin-bottom: 0.5rem;
+        }
+
+        .doomed-subtitle {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: var(--bone-dim);
+            margin-bottom: 3rem;
+        }
+
+        .characters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .character {
+            padding: 1.5rem 2rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .character::after {
+            content: '†';
+            position: absolute;
+            top: 0.5rem;
+            right: 0.8rem;
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.9rem;
+            color: var(--blood);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .character:hover::after {
+            opacity: 1;
+        }
+
+        .character:hover {
+            background: rgba(139, 26, 26, 0.08);
+        }
+
+        .char-name {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--bone);
+            margin-bottom: 0.3rem;
+        }
+
+        .char-role {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: var(--bone-dim);
+        }
+
+        /* ---- CTA SECTION ---- */
+        .cta-section {
+            padding: 8rem 1.5rem;
+            text-align: center;
+            position: relative;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(139, 26, 26, 0.12) 0%, transparent 60%);
+        }
+
+        .cta-pre {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--blood-bright);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-heading {
+            font-family: 'Cinzel Decorative', 'Cinzel', serif;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: var(--bone);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .cta-sub {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 300;
+            font-size: 1.15rem;
+            color: var(--bone-dim);
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        /* ---- BUTTONS ---- */
+        .btn {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.1em 2.8em;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--blood);
+            color: var(--bone);
+            border: 1px solid var(--blood-bright);
+            box-shadow:
+                0 0 30px rgba(139, 26, 26, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.08),
+                transparent
+            );
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--blood-bright);
+            box-shadow:
+                0 0 50px rgba(198, 40, 40, 0.5),
+                0 0 100px rgba(198, 40, 40, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--bone-dim);
+            border: 1px solid var(--smoke);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--blood);
+            color: var(--bone);
+        }
+
+        /* ---- CTA URGENCY NOTE ---- */
+        .cta-note {
+            margin-top: 1.5rem;
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--bone-dim);
+            opacity: 0.7;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--smoke), transparent);
+        }
+
+        .footer-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--bone-dim);
+            opacity: 0.5;
+        }
+
+        /* ---- DECORATIVE ELEMENTS ---- */
+        .ornament {
+            display: block;
+            text-align: center;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            color: var(--blood);
+            opacity: 0.5;
+            margin: 2rem auto;
+            letter-spacing: 0.5em;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .book-section {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 4rem 1.5rem;
+            }
+
+            .cover-img {
+                width: 280px;
+            }
+
+            .book-details {
+                text-align: center;
+            }
+
+            .format-badges {
+                justify-content: center;
+            }
+
+            .character {
+                padding: 1rem 1.5rem;
+            }
+
+            .cta-section {
+                padding: 5rem 1.5rem;
+            }
+
+            .doomed-section {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .cover-img {
+                width: 240px;
+            }
+
+            .btn {
+                font-size: 0.75rem;
+                padding: 1em 2em;
+            }
+
+            .blurb {
+                font-size: 1.05rem;
+            }
+        }
+
+        /* ---- SCROLL ANIMATIONS ---- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Atmospheric layers -->
+    <div class="atmosphere"></div>
+    <div class="grain"></div>
+    <div class="embers">
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+    </div>
+
+    <div class="content">
+
+        <!-- ======== HERO ======== -->
+        <section class="hero">
+            <p class="author-name">Daniel Roy Greenfeld</p>
+            <h1 class="book-title">Everyone<br><span class="dies">Dies</span></h1>
+            <p class="tagline">Seven companions walk a path no one survives.</p>
+            <div class="hero-cta">
+                <a href="https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad?via=anduril" class="btn btn-primary">Read It Before Anyone Else</a>
+            </div>
+            <div class="scroll-hint">
+                <span><a class="scroll-link" href="#prophecy">Descend</a></span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- ======== BOOK DETAILS ======== -->
+        <section class="book-section" id="prophecy">
+            <div class="cover-container reveal">
+                <img
+                    class="cover-img"
+                    src="https://uploads.storyoriginapp.com/c/bc/527eb4d5-3205-4532-bd0b-eb390987ad49.jpg"
+                    alt="Everyone Dies — book cover"
+                    loading="lazy"
+                >
+            </div>
+            <div class="book-details reveal">
+                <p class="section-label">The Prophecy</p>
+                <p class="blurb">
+                    A mercenary, a swordswoman, a mage, a seer&thinsp;&mdash;&thinsp;and others
+                    bound by fragile hope&thinsp;&mdash;&thinsp;set out together. But prophecy,
+                    dark magic, and betrayal ensure that by the end of their journey,
+                    everyone dies.
+                </p>
+                <p class="pub-date">Releasing <strong>May 20, 2026 on Amazon</strong></p>
+                <div class="format-badges">
+                    <span class="format-badge">EPUB</span>
+                    <span class="format-badge">MOBI</span>
+                    <span class="format-badge">PDF</span>
+                </div>
+                <a href="/arc" class="btn btn-primary" style="align-self: flex-start;">Claim Your Free Advance Review Copy</a>
+            </div>
+        </section>
+
+        <!-- ======== THE DOOMED ======== -->
+        <section class="doomed-section">
+            <div class="reveal">
+                <p class="section-label" style="border: none; text-align: center; padding-bottom: 1rem;">A Roll Call of the Damned</p>
+                <h2 class="doomed-title">The Seven</h2>
+                <p class="doomed-subtitle">None shall be spared.</p>
+            </div>
+            <div class="characters reveal">
+                <div class="character">
+                    <p class="char-name">Aaron</p>
+                    <p class="char-role">Mercenary Archer</p>
+                </div>
+                <div class="character">
+                    <p class="char-name">Bram</p>
+                    <p class="char-role">Skilled Competitor</p>
+                </div>
+                <div class="character">
+                    <p class="char-name">Timo</p>
+                    <p class="char-role">Woodcutter</p>
+                </div>
+                <div class="character">
+                    <p class="char-name">Melody</p>
+                    <p class="char-role">Swordswoman</p>
+                </div>
+                <div class="character">
+                    <p class="char-name">Trent</p>
+                    <p class="char-role">Aging Soldier</p>
+                </div>
+                <div class="character">
+                    <p class="char-name">Konstantina</p>
+                    <p class="char-role">Fire Mage</p>
+                </div>
+                <div class="character">
+                    <p class="char-name">Shai</p>
+                    <p class="char-role">Cursed Seer</p>
+                </div>
+            </div>
+            <span class="ornament reveal">&#x2020; &#x2020; &#x2020; &#x2020; &#x2020; &#x2020; &#x2020;</span>
+        </section>
+
+        <!-- ======== FINAL CTA ======== -->
+        <section class="cta-section">
+            <div class="reveal">
+                <p class="cta-pre">Free Advance Review Copy</p>
+                <h2 class="cta-heading">Know Their Names<br>Before the World Does</h2>
+                <p class="cta-sub">
+                    Be among the first to read <em>Everyone Dies</em>.
+                    Download your free advance copy now, and leave a review
+                    when the book launches May&nbsp;20 on Amazon.
+                </p>
+                <a href="/arc" class="btn btn-primary">Get Your Free Advance Review Copy</a>
+                <p class="cta-note">Available as EPUB, MOBI, or PDF. No purchase necessary.</p>
+
+                <span class="ornament reveal">&#x2020; &#x2020; &#x2020; &#x2020; &#x2020; &#x2020; &#x2020;</span>
+
+                <h2 class="cta-heading">Get notifications</h2>
+
+                <p class="cta-sub">Join the mailing list to get periodic notifications from the author.
+                    Unsubscribe anytime.
+
+                </p>
+
+                <a href="/list-signup" class="btn btn-primary">Sign up to the mailing list</a>
+                
+            </div>
+        </section>
+
+        
+
+
+        <!-- ======== FOOTER ======== -->
+        <footer>
+            <p class="footer-name">&copy; 2026 Daniel Roy Greenfeld</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Scroll-triggered reveal animations
+        const reveals = document.querySelectorAll('.reveal');
+
+        function checkReveal() {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - 80) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkReveal, { passive: true });
+        window.addEventListener('load', checkReveal);
+    </script>
+
+</body>
+</html>
