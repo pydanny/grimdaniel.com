@@ -1,6 +1,8 @@
-def main():
-    print("Hello from grimdaniel-com!")
+import air
+
+app = air.Air()
 
 
-if __name__ == "__main__":
-    main()
+@app.page
+def index():
+    return air.H1('Hello, world')
