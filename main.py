@@ -182,14 +182,6 @@ def MarkdownPage(slug: str):
     )
 
 @app.page
-def arc():
-    return air.RedirectResponse('https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad?via=anduril')
-
-@app.page
-def list_signup():
-    return air.RedirectResponse('https://sendfox.com/andurilharkness')
-
-@app.page
 def signed_up(request: air.Request):
         return jinja(
         request,
