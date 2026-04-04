@@ -127,7 +127,7 @@ def everyone_dies():
 
         air.Div(
             air.Div(
-                air.Img(src='/static/books/everyone-dies.jpg'),
+                air.Img(src='/static/books/everyone-dies.webp'),
                 class_='col-6'
             ),
             air.Div(
