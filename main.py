@@ -181,6 +181,26 @@ def MarkdownPage(slug: str):
         force_dark_mode=True
     )
 
+@app.page
+def arc():
+    return air.RedirectResponse('https://storyoriginapp.com/reviewcopies/48e4c3d5-67a9-44c2-b199-a165c8a851ad?via=anduril')
+
+@app.page
+def list_signup():
+    return air.RedirectResponse('https://sendfox.com/andurilharkness')
+
+@app.page
+def signed_up(request: air.Request):
+        return jinja(
+        request,
+        name="signed_up.html"
+    )
+
+
+@app.get("/robots.txt")
+def robots_txt(request: air.Request):
+    return air.responses.PlainTextResponse(Path('templates/robots.txt').read_text())
+
 @app.get("/{slug:path}")
 async def page_or_redirect1(slug: str):
     redirects_url = redirects.get(slug, None)
