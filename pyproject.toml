@@ -6,7 +6,9 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "air>=0.48.1",
+    "frontmatter>=3.0.8",
     "hypercorn>=0.18.0",
+    "mistletoe>=1.5.1",
 ]
 
 
