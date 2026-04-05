@@ -154,15 +154,17 @@ def MarkdownPage(slug: str):
         raise HTTPException(status_code=404)
     date = content["attributes"].get("date", "")
     title = content["attributes"].get("title", slug)
+    description = content["attributes"].get("description", '')
     return mucss(
         air.Title(title),
         air.Section(
             air.H1(content["attributes"].get("title", "")),
             air.P(
                 f'by {content["attributes"].get("author", "")}',
-                air.Br(),
-                air.Small(air.Time(date)),
             ),
+            air.Small(air.Time(date)),
+            air.P(description),
+            air.Br(),
             air.Div(air.Raw(markdown(content["body"]))),
         ),
         air.Nav(

@@ -1,5 +1,5 @@
 ---
-title: "Grimdark books by Daniel Roy Greenfeld"
+title: "Grimdark Series"
 description: "The growing list of the works by the author in the grimdark genre."
 author: Daniel Roy Greenfeld
 ---
