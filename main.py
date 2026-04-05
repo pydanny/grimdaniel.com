@@ -135,7 +135,7 @@ def MarkdownPage(slug: str):
     description = content["attributes"].get("description", '')
     image = content["attributes"].get("image", 'https://grimdaniel.com/static/books/everyone-dies.webp')
     if not image.startswith('https://'):
-        image = f'https://grimdaniel.com/{image}'
+        image = f'https://grimdaniel.com{image}'
     author = content["attributes"].get("author", "")
     return mucss(
         air.Style("""
