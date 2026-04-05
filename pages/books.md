@@ -10,6 +10,8 @@ author: Daniel Roy Greenfeld
 
 ## Book 0: The Curse
 
+![](/static/images/the-curse.webp)
+
 Some evils should never be woken.
 
 In a forgotten mountain valley, jealousy sets three young lives on a collision course with ancient darkness. Sedge, the strongest boy in the village, destroys everything he loves out of spite. Petal, a witch in training, utters a curse she believes is harmless. And Kurian, a wizard's apprentice serving a seemingly kind master has been kept deliberately ignorant, opens a book he was never meant to read.
@@ -28,6 +30,8 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 
 ## Book 1: Everyone Dies
+
+![](/static/books/everyone-dies.webp)
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.
