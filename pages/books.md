@@ -1,12 +1,13 @@
 ---
-title: "Grimdark Series"
+title: "Grimdaniel "
 description: "The growing list of the works by the author in the grimdark genre."
 author: Daniel Roy Greenfeld
+image: ''
 ---
 
 <div class="row">
 
-<div class="col-6">
+<div class="col-12 col-md-6 col-lg-4">
 
 ## Book 0: The Curse
 
@@ -22,22 +23,30 @@ By morning, no one in the village will be spared.
 
 A tale of petty cruelties and catastrophic consequences, where a lover's wounded pride unleashes horrors that devour a town. Every character makes the choice that feels right in the moment. Yet every choice feeds the darkness below.
 
+**Available now!**
+
 "The Curse" is the short story prequel to the "Everyone Dies" novel.
+
+*Get the curse for free by signing up to my mailing list. Unsubscribe anytime.*
+
+<a class="btn btn-primary" href="/list-signup">Get "The Curse" for Free</a>
 
 
 </div>
-<div class="col-6">
+<div class="col-12 col-md-6 col-md-6">
 
 
 ## Book 1: Everyone Dies
 
-![](/static/books/everyone-dies.webp)
+![](/static/images/everyone-dies.webp)
+
+*A desperate group bound by fragile hope&thinsp;&mdash;&thinsp;sets out together. But prophecy, dark magic, and betrayal ensure that by the end of their journey, everyone dies.*
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.
 - Timo, a quiet woodcutter with no taste for war.
 - Melody, a young swordswoman desperate to prove she belongs.
-- Trent, a weary soldier awaiting the birth of his great-grandchild.
+- Trent, a weary soldier awaiting the birth of his first great-grandchild.
 - Konstantina, a fire mage sworn to the king's service.
 - Shai, a seer cursed with the knowledge of what is to come.
 
@@ -51,9 +60,17 @@ Everyone dies.
 
 A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
+**Releasing May 20, 2026 on Amazon**
+
+*If you want to read "Everyone Dies" for free, you can request a free advance copy now. In return you agree to leave a review after the book launches May 20 on Amazon.*
+
+<a class="btn btn-primary" href="/arc">Request a free advanced review copy</a>
+
 </div>
 </div>
+
+<!-- ---
 
 ## Book 2: Title Forthcoming
 
-Coming soon
+Coming soon -->

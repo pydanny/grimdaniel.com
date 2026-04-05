@@ -92,56 +92,14 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
             ),
             *head_tags,
         ),
-        air.Body(air.Main(*body_tags, class_="container")),
+        air.Body(air.Main(*body_tags, class_="container"), class_="container"),
         data_theme = 'dark' if force_dark_mode else ''
     )
 
 
 @app.page
 def index(request: air.Request):
-    return jinja(
-        request,
-        name="index.html"
-    )
-
-
-@app.page
-def everyone_dies():
-    title = 'Grim Daniel'
-    description = 'The official website for author Daniel Roy Greenfeld'
-    return mucss(
-        air.Title(title),
-        air.Meta(property='og:description', content=description),
-        air.H2(title), 
-        air.P(description),
-        air.Section(
-            air.Div(
-                air.H1(air.A("Everyone Dies", href='/everyone-dies')),
-                air.P('Seven companions walk a path no one survives', class_='hero-tagline'),
-                class_='container',
-            ),
-            class_='hero hero-primary',
-        ),
-
-        # Second section
-
-        air.Div(
-            air.Div(
-                air.Img(src='/static/books/everyone-dies.webp'),
-                class_='col-6'
-            ),
-            air.Div(
-                air.H2('The Prophecy'),
-                air.P("A mercenary, a swordswoman, a mage, a seer — and others bound by fragile hope — set out together. But prophecy, dark magic, and betrayal ensure that by the end of their journey, everyone dies."),
-                air.P("Releasing ", air.Strong("May 20, 2026 on Amazon")),
-                class_='col-6',
-            ),                
-            class_='row'
-        ),
-
-        force_dark_mode=True
-    )
-
+    return MarkdownPage('books')
 
 
 redirects = json.loads(pathlib.Path("redirects.json").read_text())
@@ -155,13 +113,24 @@ def MarkdownPage(slug: str):
     date = content["attributes"].get("date", "")
     title = content["attributes"].get("title", slug)
     description = content["attributes"].get("description", '')
+    image = content["attributes"].get("image", 'https://grimdaniel.com/static/books/everyone-dies.webp')
+    author = content["attributes"].get("author", "")
     return mucss(
+        air.Meta(charset='UTF-8'),
+        air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
+        air.Meta(name='description', content=description),
+        air.Meta(property='og:title', content=title),
+        air.Meta(property='og:description', content=description),
+        air.Meta(property='og:image', content=image),
+        air.Meta(property='og:type', content='website'),
+        air.Meta(property='og:url', content='https://grimdaniel.com'),
+        air.Meta(name='twitter:card', content='summary_large_image'),        
         air.Title(title),
         air.Section(
             air.H1(content["attributes"].get("title", "")),
             air.P(
-                f'by {content["attributes"].get("author", "")}',
-            ),
+                f'by {author}',
+            ) if author else '',
             air.Small(air.Time(date)),
             air.P(description),
             air.Br(),
