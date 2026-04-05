@@ -1,13 +1,8 @@
 ---
 title: "Grimdaniel "
-description: "The growing list of the works by the author in the grimdark genre."
-author: Daniel Roy Greenfeld
-image: ''
+description: "Grimdark stories by Daniel Roy Greenfeld."
+image: '/static/images/the-curse.webp'
 ---
-
-<div class="row">
-
-<div class="col-12 col-md-6 col-lg-4">
 
 ## Book 0: The Curse
 
@@ -29,11 +24,10 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 *Get the curse for free by signing up to my mailing list. Unsubscribe anytime.*
 
-<a class="btn btn-primary" href="/list-signup">Get "The Curse" for Free</a>
+<a class="btn btn-primary" href="/list-signup">Sign up to get "The Curse" for free</a>
 
 
-</div>
-<div class="col-12 col-md-6 col-md-6">
+---
 
 
 ## Book 1: Everyone Dies
@@ -66,8 +60,6 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 <a class="btn btn-primary" href="/arc">Request a free advanced review copy</a>
 
-</div>
-</div>
 
 <!-- ---
 

@@ -12,7 +12,26 @@ markdown = partial(mistletoe.markdown)
 app = air.Air()
 jinja = air.JinjaRenderer(directory="templates")
 
+HEADER_TAG_TYPES = (air.Header,air.Nav,)
+FOOTER_TAG_TYPES = (air.Footer,)
+
 # TODO add theme color enumerator for muCss
+
+def filter_header_tags(tags: tuple) -> list:
+    """Given a list of tags, only list the ones that belong in header of an HTML document.
+
+    Returns:
+        List of tags that belong in the header of an HTML document.
+    """
+    return [t for t in tags if isinstance(t, HEADER_TAG_TYPES)]
+
+def filter_footer_tag_types(tags: tuple) -> list:
+    """Given a list of tags, only list the ones that belong in footer of an HTML document.
+
+    Returns:
+        List of tags that belong in the footer of an HTML document.
+    """
+    return [t for t in tags if isinstance(t, FOOTER_TAG_TYPES)]    
 
 
 def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: bool = False, **kwargs) -> air.Html | air.Children:
@@ -75,6 +94,7 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
     """
     body_tags = air.layouts.filter_body_tags(children)
     head_tags = air.layouts.filter_head_tags(children)
+    header_tags = ''
 
     if is_htmx:
         return air.Children(air.Main(*body_tags, class_="container"), *head_tags)
@@ -92,7 +112,7 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
             ),
             *head_tags,
         ),
-        air.Body(air.Main(*body_tags, class_="container"), class_="container"),
+        air.Body(air.Main(*body_tags, class_="container")),
         data_theme = 'dark' if force_dark_mode else ''
     )
 
@@ -114,8 +134,15 @@ def MarkdownPage(slug: str):
     title = content["attributes"].get("title", slug)
     description = content["attributes"].get("description", '')
     image = content["attributes"].get("image", 'https://grimdaniel.com/static/books/everyone-dies.webp')
+    if not image.startswith('https://'):
+        image = f'https://grimdaniel.com/{image}'
     author = content["attributes"].get("author", "")
     return mucss(
+        air.Style("""
+html {
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+        """),
         air.Meta(charset='UTF-8'),
         air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
         air.Meta(name='description', content=description),
@@ -136,16 +163,19 @@ def MarkdownPage(slug: str):
             air.Br(),
             air.Div(air.Raw(markdown(content["body"]))),
         ),
-        air.Nav(
-            air.Ul(
-                air.Li(
-                    air.A('Home', href='/'),
+        air.Footer(
+            air.Nav(
+                air.Ul(
+                    air.Li(
+                        air.A('Home', href='/'),
+                    ),
+                    air.Li(title, aria_current='page'),
+                    class_='breadcrumb',
                 ),
-                air.Li(title, aria_current='page'),
-                class_='breadcrumb',
-            ),
-            aria_label='Breadcrumb',
-        ),   
+                aria_label='Breadcrumb',
+            ),   
+            air.P(air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld")),     
+        ),
         title=title,
         description=content["attributes"].get("description", ""),
         theme='red',
