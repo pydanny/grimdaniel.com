@@ -1,6 +1,7 @@
 ---
 title: About Daniel Roy Greenfeld
 description: Grimdark Fantasy Author
+image: "/static/images/the-curse-twitter-card.png"
 ---
 
 After a ten year hiatus I have started writing fantasy again. This time, however, the writing indulges my desire to write in a more dark style. Long have I wanted to write stories where characters die like fruitflies.
