@@ -168,6 +168,7 @@ def MarkdownPage(slug: str):
         air.Meta(property='og:image', content=image),
         air.Meta(property='og:type', content='website'),
         air.Meta(property='og:url', content='https://grimdaniel.com'),
+        air.Meta(name="twitter:image", content=image),
         air.Meta(name='twitter:card', content='summary_large_image'),        
         air.Title(social_title),
         air.Header(
