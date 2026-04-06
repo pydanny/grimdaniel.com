@@ -12,7 +12,7 @@ markdown = partial(mistletoe.markdown)
 app = air.Air()
 jinja = air.JinjaRenderer(directory="templates")
 
-HEADER_TAG_TYPES = (air.Header,air.Nav,)
+HEADER_TAG_TYPES = (air.Header,)
 FOOTER_TAG_TYPES = (air.Footer,)
 
 # TODO add theme color enumerator for muCss
@@ -32,6 +32,14 @@ def filter_footer_tag_types(tags: tuple) -> list:
         List of tags that belong in the footer of an HTML document.
     """
     return [t for t in tags if isinstance(t, FOOTER_TAG_TYPES)]    
+
+def filter_body_tags(tags: tuple) -> list:
+    """Given a list of tags, only list the ones that belong in header of an HTML document.
+
+    Returns:
+        List of tags that belong in the header of an HTML document.
+    """
+    return [t for t in tags if not isinstance(t, HEADER_TAG_TYPES)]
 
 
 def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: bool = False, **kwargs) -> air.Html | air.Children:
@@ -92,9 +100,9 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
 
             uvicorn.run(app, host="127.0.0.1", port=8000)
     """
-    body_tags = air.layouts.filter_body_tags(children)
+    body_tags = filter_body_tags(air.layouts.filter_body_tags(children))
     head_tags = air.layouts.filter_head_tags(children)
-    header_tags = ''
+    header_tags = filter_header_tags(children)
 
     if is_htmx:
         return air.Children(air.Main(*body_tags, class_="container"), *head_tags)
@@ -110,6 +118,7 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
                 crossorigin="anonymous",
             ),
+            *header_tags,
             *head_tags,
         ),
         air.Body(air.Main(*body_tags, class_="container")),
@@ -119,7 +128,7 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
 
 @app.page
 def index(request: air.Request):
-    return MarkdownPage('books')
+    return MarkdownPage('index')
 
 
 redirects = json.loads(pathlib.Path("redirects.json").read_text())
@@ -132,8 +141,10 @@ def MarkdownPage(slug: str):
         raise HTTPException(status_code=404)
     date = content["attributes"].get("date", "")
     title = content["attributes"].get("title", slug)
+    if title == 'index':
+        title = 'Grimdaniel'
     description = content["attributes"].get("description", '')
-    image = content["attributes"].get("image", 'https://grimdaniel.com/static/books/everyone-dies.webp')
+    image = content["attributes"].get("image", 'https://grimdaniel.com/static/images/the-curse.webp')
     if not image.startswith('https://'):
         image = f'https://grimdaniel.com{image}'
     author = content["attributes"].get("author", "")
@@ -153,8 +164,40 @@ html {
         air.Meta(property='og:url', content='https://grimdaniel.com'),
         air.Meta(name='twitter:card', content='summary_large_image'),        
         air.Title(title),
+        air.Header(
+            air.Nav(
+                air.Ul(
+                    air.Li(
+                        air.Strong('Grimdaniel'),
+                    ),
+                ),
+                air.Input(
+                    hidden=True,
+                    type_='checkbox',
+                    class_='navbar-toggle',
+                    id_='nav-full',
+                ),
+                air.Label(
+                    '☰',
+                    for_='nav-full',
+                    class_='navbar-burger',
+                ),
+                air.Ul(
+                    air.Li(
+                        air.A('Home', href='/'),
+                    ),
+                    air.Li(
+                        air.A('About', href='/about'),
+                    ),
+                    class_='navbar-menu',
+                ),
+                class_='container',
+            ),
+            class_='bg-primary sticky-top',
+        ),
+
         air.Section(
-            air.H1(content["attributes"].get("title", "")),
+            air.H1(title) if title != 'Grimdaniel' else '',
             air.P(
                 f'by {author}',
             ) if author else '',

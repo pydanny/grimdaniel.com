@@ -1,6 +1,4 @@
 ---
-title: "Grimdaniel "
-description: "Grimdark stories by Daniel Roy Greenfeld."
 image: '/static/images/the-curse.webp'
 ---
 
