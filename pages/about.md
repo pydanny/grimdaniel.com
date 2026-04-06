@@ -3,9 +3,7 @@ title: About Daniel Roy Greenfeld
 description: Grimdark Fantasy Author
 ---
 
-On January 16, 2026 I hit my head. Thirty hours later I was exhibiting the signs of a head injury. I've had concussions before, so expected the symtoms to fade within a few, short weeks. Instead they lingered. I had to put on pause most of my normal activities as they caused vision difficulties and headaches. Yet my desire to tell stories had increased, also I discovered that writing fiction didn't cause me any of the dehabilitating symptoms.
-
-After about a ten year break I started writing fantasy again. This time, however, the writing indulges my desire to write in a more dark style. Long have I wanted to write stories where characters die like fruitflies.
+After a ten year hiatus I have started writing fantasy again. This time, however, the writing indulges my desire to write in a more dark style. Long have I wanted to write stories where characters die like fruitflies.
 
 My writing follows these six themes that are common to the grimdark fantasy genre:
 
