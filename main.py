@@ -113,6 +113,10 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
                 rel="stylesheet",
                 href=f"https://unpkg.com/@digicreon/mucss/dist/mu.{theme}.css",
             ),
+            air.Link(
+                rel="stylesheet",
+                href="/static/style.css"
+            ),
             air.Script(
                 src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js",
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
@@ -149,11 +153,6 @@ def MarkdownPage(slug: str):
         image = f'https://grimdaniel.com{image}'
     author = content["attributes"].get("author", "")
     return mucss(
-        air.Style("""
-html {
-  font-size: clamp(16px, 2.5vw, 20px);
-}
-        """),
         air.Meta(charset='UTF-8'),
         air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
         air.Meta(name='description', content=description),
