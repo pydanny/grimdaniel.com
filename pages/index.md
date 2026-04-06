@@ -2,7 +2,8 @@
 image: '/static/images/the-curse.webp'
 social_title: Grimdaniel
 social_description: In the works of Daniel Roy Greenfeld, evils that should never be woken walk the world and seven companions walk a path no one survives.
-image: "/static/images/the-curse-twitter-card.png"
+image: "/static/images/the-curse.png"
+twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
 
 ## Book 0: The Curse

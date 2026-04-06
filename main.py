@@ -158,6 +158,9 @@ def MarkdownPage(slug: str):
     image = content["attributes"].get("image", 'https://grimdaniel.com/static/images/the-curse.webp')
     if not image.startswith('https://'):
         image = f'https://grimdaniel.com{image}'
+    twitter_image = content["attributes"].get("twitter_image", image)
+    if not twitter_image.startswith('https://'):
+        twitter_image = f'https://grimdaniel.com{twitter_image}'
     author = content["attributes"].get("author", "")
     return mucss(
         air.Meta(charset='UTF-8'),
@@ -168,7 +171,7 @@ def MarkdownPage(slug: str):
         air.Meta(property='og:image', content=image),
         air.Meta(property='og:type', content='website'),
         air.Meta(property='og:url', content='https://grimdaniel.com'),
-        air.Meta(name="twitter:image", content=image),
+        air.Meta(name="twitter:image", content=twitter_image),
         air.Meta(name='twitter:card', content='summary_large_image'),   
         air.Meta(name='twitter:site', content="@pydanny"),
         air.Meta(name='twitter:title', content=social_title),
