@@ -152,7 +152,9 @@ def MarkdownPage(slug: str):
     title = content["attributes"].get("title", slug)
     if title == 'index':
         title = 'Grimdaniel'
+    social_title = content["attributes"].get("social_title", title)
     description = content["attributes"].get("description", '')
+    social_description = content["attributes"].get("social_description", description)
     image = content["attributes"].get("image", 'https://grimdaniel.com/static/images/the-curse.webp')
     if not image.startswith('https://'):
         image = f'https://grimdaniel.com{image}'
@@ -160,14 +162,14 @@ def MarkdownPage(slug: str):
     return mucss(
         air.Meta(charset='UTF-8'),
         air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
-        air.Meta(name='description', content=description),
-        air.Meta(property='og:title', content=title),
-        air.Meta(property='og:description', content=description),
+        air.Meta(name='description', content=social_description),
+        air.Meta(property='og:title', content=social_title),
+        air.Meta(property='og:description', content=social_description),
         air.Meta(property='og:image', content=image),
         air.Meta(property='og:type', content='website'),
         air.Meta(property='og:url', content='https://grimdaniel.com'),
         air.Meta(name='twitter:card', content='summary_large_image'),        
-        air.Title(title),
+        air.Title(social_title),
         air.Header(
             air.Nav(
                 air.Ul(
@@ -205,9 +207,8 @@ def MarkdownPage(slug: str):
             air.P(
                 f'by {author}',
             ) if author else '',
-            air.Small(air.Time(date)),
-            air.P(description),
-            air.Br(),
+            air.P(description) if description else '',
+            air.Br() if description else '',
             air.Div(air.Raw(markdown(content["body"]))),
         ),
         air.Footer(
