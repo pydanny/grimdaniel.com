@@ -25,7 +25,7 @@ def filter_header_tags(tags: tuple) -> list:
     """
     return [t for t in tags if isinstance(t, HEADER_TAG_TYPES)]
 
-def filter_footer_tag_types(tags: tuple) -> list:
+def filter_footer_tags(tags: tuple) -> list:
     """Given a list of tags, only list the ones that belong in footer of an HTML document.
 
     Returns:
@@ -39,7 +39,7 @@ def filter_body_tags(tags: tuple) -> list:
     Returns:
         List of tags that belong in the header of an HTML document.
     """
-    return [t for t in tags if not isinstance(t, HEADER_TAG_TYPES)]
+    return [t for t in tags if not isinstance(t, HEADER_TAG_TYPES+HEADER_TAG_TYPES+FOOTER_TAG_TYPES)]
 
 
 def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: bool = False, **kwargs) -> air.Html | air.Children:
@@ -103,6 +103,7 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
     body_tags = filter_body_tags(air.layouts.filter_body_tags(children))
     head_tags = air.layouts.filter_head_tags(children)
     header_tags = filter_header_tags(children)
+    footer_tags = filter_footer_tags(children)
 
     if is_htmx:
         return air.Children(air.Main(*body_tags, class_="container"), *head_tags)
@@ -122,10 +123,14 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
                 crossorigin="anonymous",
             ),
-            *header_tags,
             *head_tags,
+        ),    
+        air.Body(
+            *header_tags,    
+            air.Main(*body_tags, class_="container"),
+            *footer_tags,
         ),
-        air.Body(air.Main(*body_tags, class_="container")),
+                
         data_theme = 'dark' if force_dark_mode else ''
     )
 
@@ -167,7 +172,7 @@ def MarkdownPage(slug: str):
             air.Nav(
                 air.Ul(
                     air.Li(
-                        air.Strong('Grimdaniel'),
+                        air.A(air.Strong('Grimdaniel'),href='/'),
                     ),
                 ),
                 air.Input(
@@ -217,6 +222,7 @@ def MarkdownPage(slug: str):
                 aria_label='Breadcrumb',
             ),   
             air.P(air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld")),     
+            class_='container'
         ),
         title=title,
         description=content["attributes"].get("description", ""),

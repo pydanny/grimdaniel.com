@@ -5,7 +5,7 @@ description: Grimdark Fantasy Author
 
 On January 16, 2026 I hit my head. Thirty hours later I was exhibiting the signs of a head injury. I've had concussions before, so expected the symtoms to fade within a few, short weeks. Instead they lingered. I had to put on pause most of my normal activities as they caused vision difficulties and headaches. Yet my desire to tell stories had increased, also I discovered that writing fiction didn't cause me any of the dehabilitating symptoms.
 
-So after about a ten year break I started writing fantasy again. This time, however, I was compelled to write in a darker vein. Long have I wanted to write stories where characters die like fruitflies. While I'm better, the desire to write has only increased. This site and the stories and books on it are the result.
+After about a ten year break I started writing fantasy again. This time, however, the writing indulges my desire to write in a more dark style. Long have I wanted to write stories where characters die like fruitflies.
 
 My writing follows these six themes that are common to the grimdark fantasy genre:
 
@@ -16,3 +16,7 @@ My writing follows these six themes that are common to the grimdark fantasy genr
 5. **Power over morality** - Characters succeed not by being good, but by being ruthless, clever, or lucky.
 6. **Deconstruction of traditional fantasy tropes** - The classics upon which the fantasy genre is built are subverted.
 
+Thus far I have two stories written, either one you can read today by clicking the links on the story titles:
+
+- [The Curse](/list-signup) - About the awakening of evil in a quiet mountain village. Reading this requires signing up to my newsletter.
+- [Everyone Dies](/arc) - Seven companions walk a path no one survives. Click to request an advance review copy.
