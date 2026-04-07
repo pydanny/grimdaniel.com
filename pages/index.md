@@ -8,7 +8,16 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 
 ## Book 0: The Curse
 
-![](/static/images/the-curse.webp)
+<div class="row">
+
+<div class="col-3">
+<figure>
+<img src="/static/images/the-curse.small.png" >
+<figcaption>Cover for The Curse</figcaption>
+</figure>
+
+</div>
+<div class="col-9">
 
 Some evils should never be woken.
 
@@ -28,29 +37,33 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 <a class="btn btn-primary" href="/list-signup">Sign up to get "The Curse" for free</a>
 
+</div>
 
 ---
 
 
 ## Book 1: Everyone Dies
 
-![](/static/images/everyone-dies.webp)
+<div class="row">
 
-*A desperate group bound by fragile hope&thinsp;&mdash;&thinsp;sets out together. But prophecy, dark magic, and betrayal ensure that by the end of their journey, everyone dies.*
+<div class="col-3">
+<figure>
+<img src="/static/images/everyone-dies.webp" >
+<figcaption>Cover for Everyone Dies</figcaption>
+</figure>
+
+</div>
+<div class="col-9">
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.
 - Timo, a quiet woodcutter with no taste for war.
 - Melody, a young swordswoman desperate to prove she belongs.
-- Trent, a weary soldier awaiting the birth of his first great-grandchild.
+- Trent, a weary soldier awaiting the birth of his great-grandchild.
 - Konstantina, a fire mage sworn to the king's service.
 - Shai, a seer cursed with the knowledge of what is to come.
 
-They travel together, bound by circumstance, loyalty, and fragile hope.
-
-But their fates are already sealed.
-
-Because in the end...
+They travel together, bound by circumstance, loyalty, and fragile hope. But their fates are already sealed. Because in the end...
 
 Everyone dies.
 
@@ -61,6 +74,9 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 *If you want to read "Everyone Dies" for free, you can request a free advance copy now. In return you agree to leave a review after the book launches May 20 on Amazon.*
 
 <a class="btn btn-primary" href="/arc">Request a free advanced review copy</a>
+
+</div>
+</div>
 
 
 <!-- ---

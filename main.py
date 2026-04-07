@@ -162,6 +162,7 @@ def MarkdownPage(slug: str):
     if not twitter_image.startswith('https://'):
         twitter_image = f'https://grimdaniel.com{twitter_image}'
     author = content["attributes"].get("author", "")
+    text = markdown(content["body"])
     return mucss(
         air.Meta(charset='UTF-8'),
         air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
@@ -208,7 +209,6 @@ def MarkdownPage(slug: str):
             ),
             class_='bg-primary sticky-top',
         ),
-
         air.Section(
             air.H1(title) if title != 'Grimdaniel' else '',
             air.P(
@@ -216,7 +216,7 @@ def MarkdownPage(slug: str):
             ) if author else '',
             air.P(description) if description else '',
             air.Br() if description else '',
-            air.Div(air.Raw(markdown(content["body"]))),
+            air.Div(air.Raw(text)),
         ),
         air.Footer(
             air.Nav(
