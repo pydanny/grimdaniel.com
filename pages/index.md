@@ -13,7 +13,7 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 <div class="col-3">
 <figure>
 <img src="/static/images/the-curse.small.png" >
-<figcaption>Cover for The Curse</figcaption>
+<!-- <figcaption>Cover for The Curse</figcaption> -->
 </figure>
 
 </div>
@@ -49,7 +49,7 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 <div class="col-3">
 <figure>
 <img src="/static/images/everyone-dies.webp" >
-<figcaption>Cover for Everyone Dies</figcaption>
+<!-- <figcaption>Cover for Everyone Dies</figcaption> -->
 </figure>
 
 </div>
