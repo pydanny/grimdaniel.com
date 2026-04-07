@@ -10,14 +10,14 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 
 <div class="row">
 
-<div class="col-3">
+<div class="col-4">
 <figure>
 <img src="/static/images/the-curse.small.png" >
 <!-- <figcaption>Cover for The Curse</figcaption> -->
 </figure>
 
 </div>
-<div class="col-9">
+<div class="col-8">
 
 Some evils should never be woken.
 
