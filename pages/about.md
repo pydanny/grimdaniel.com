@@ -16,7 +16,7 @@ My writing follows these six themes that are common to the grimdark fantasy genr
 5. **Power over morality** - Characters succeed not by being good, but by being ruthless, clever, or lucky.
 6. **Deconstruction of traditional fantasy tropes** - The classics upon which the fantasy genre is built are subverted.
 
-I have two stories written, either one you can read today by clicking the links on the story titles:
+I have written two stories, either one you can read today for FREE by clicking the links on the story titles:
 
-- [The Curse](/list-signup) - About the awakening of evil in a quiet mountain village. Reading this requires signing up to my newsletter.
-- [Everyone Dies](/arc) - Seven companions walk a path no one survives. Click to request an advance review copy.
+- [The Curse](/the-curse) - About the awakening of evil in a quiet mountain village.
+- [Everyone Dies](/everyone-dies) - Seven companions walk a path no one survives.
