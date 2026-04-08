@@ -32,7 +32,7 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 "The Curse" is the short story prequel to the "Everyone Dies" novel.
 
-*Get the curse for free by signing up to my mailing list. Unsubscribe anytime.*
+*Get the curse for free by signing up to my mailing list, the "Not Dead Yet Newsletter". Unsubscribe anytime.*
 
 <a class="btn btn-primary" href="/list-signup">Sign up to get "The Curse" for free</a>
 

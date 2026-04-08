@@ -273,7 +273,11 @@ def newsletter():
         Header(),
         air.Title(title),
         air.H1(title),
-        air.P('Read past editions of my mailing list'),
+        air.Div(air.Raw(markdown("""
+My newsletter on grimdark fiction comes out every week or two. Previous editions are listed here within two weeks after mailout. Signup and you'll receive FREE access to "The Curse", prelude to "Everyone Dies." Unsubscribe anytime.
+
+<a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the Not Dead Yet Newsletter</a>"""))),
+        air.H2("Past editions of the newsletter"),
         air.Ol(
             *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in posts]
         ),
