@@ -6,8 +6,13 @@ from frontmatter import Frontmatter
 from fastapi import HTTPException
 import mistletoe
 from functools import partial
+from datetime import datetime
 
 markdown = partial(mistletoe.markdown)
+
+
+def pretty_date(date: str):
+    return datetime.strptime(date, "%Y-%m-%d").strftime("%B %-d, %Y")
 
 app = air.Air()
 jinja = air.JinjaRenderer(directory="templates")
@@ -135,6 +140,57 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
     )
 
 
+def Header():
+    return air.Header(
+        air.Nav(
+            air.Ul(
+                air.Li(
+                    air.A(air.Strong('Grimdaniel'),href='/'),
+                ),
+            ),
+            air.Input(
+                hidden=True,
+                type_='checkbox',
+                class_='navbar-toggle',
+                id_='nav-full',
+            ),
+            air.Label(
+                '☰',
+                for_='nav-full',
+                class_='navbar-burger',
+            ),
+            air.Ul(
+                air.Li(
+                    air.A('Home', href='/'),
+                ),
+                air.Li(
+                    air.A('About', href='/about'),
+                ),
+                class_='navbar-menu',
+            ),
+            class_='container',
+        ),
+        class_='bg-primary sticky-top',
+    )  
+
+
+def Footer(title):
+    return air.Footer(
+        air.Nav(
+            air.Ul(
+                air.Li(
+                    air.A('Home', href='/'),
+                ),
+                air.Li(title, aria_current='page'),
+                class_='breadcrumb',
+            ),
+            aria_label='Breadcrumb',
+        ),   
+        air.P(air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld")),     
+        class_='container'
+    )    
+
+
 @app.page
 def index(request: air.Request):
     return MarkdownPage('index')
@@ -178,37 +234,7 @@ def MarkdownPage(slug: str):
         air.Meta(name='twitter:title', content=social_title),
         air.Meta(name='twitter:description', content=social_description),     
         air.Title(social_title),
-        air.Header(
-            air.Nav(
-                air.Ul(
-                    air.Li(
-                        air.A(air.Strong('Grimdaniel'),href='/'),
-                    ),
-                ),
-                air.Input(
-                    hidden=True,
-                    type_='checkbox',
-                    class_='navbar-toggle',
-                    id_='nav-full',
-                ),
-                air.Label(
-                    '☰',
-                    for_='nav-full',
-                    class_='navbar-burger',
-                ),
-                air.Ul(
-                    air.Li(
-                        air.A('Home', href='/'),
-                    ),
-                    air.Li(
-                        air.A('About', href='/about'),
-                    ),
-                    class_='navbar-menu',
-                ),
-                class_='container',
-            ),
-            class_='bg-primary sticky-top',
-        ),
+        Header(),
         air.Section(
             air.H1(title) if title != 'Grimdaniel' else '',
             air.P(
@@ -239,6 +265,24 @@ def MarkdownPage(slug: str):
     )
 
 @app.page
+def newsletter():
+    title = 'The Not Dead Yet Newsletter'
+    posts =  pathlib.Path('pages/newsletter/').glob('*.md')
+
+    return mucss(        
+        Header(),
+        air.Title(title),
+        air.H1(title),
+        air.P('Read past editions of my mailing list'),
+        air.Ol(
+            *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in posts]
+        ),
+        Footer(title),
+        theme='red',
+        force_dark_mode=True
+    )
+
+@app.page
 def signed_up(request: air.Request):
         return jinja(
         request,
@@ -251,7 +295,7 @@ def robots_txt(request: air.Request):
     return air.responses.PlainTextResponse(Path('templates/robots.txt').read_text())
 
 @app.get("/{slug:path}")
-async def page_or_redirect1(slug: str):
+async def page_or_redirect(slug: str):
     redirects_url = redirects.get(slug, None)
     if redirects_url is not None:
         return air.RedirectResponse(redirects_url)
