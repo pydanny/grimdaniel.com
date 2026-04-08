@@ -10,7 +10,6 @@ author: Daniel Roy Greenfeld
 <div class="col-3">
 <figure>
 <img src="/static/images/everyone-dies.webp" >
-<figcaption>Cover for Everyone Dies</figcaption>
 </figure>
 
 </div>

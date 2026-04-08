@@ -9,7 +9,6 @@ author: Daniel Roy Greenfeld
 <div class="col-3">
 <figure>
 <img src="/static/images/the-curse.small.png" >
-<figcaption>Cover for The Curse</figcaption>
 </figure>
 
 </div>
