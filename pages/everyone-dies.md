@@ -2,6 +2,8 @@
 title: "Everyone Dies"
 description: "Seven companions walk a path no one survives."
 author: Daniel Roy Greenfeld
+image: "/static/images/everyone-dies.jpg"
+twitter_image: "/static/images/everyone-dies.jpg"
 ---
 
 
