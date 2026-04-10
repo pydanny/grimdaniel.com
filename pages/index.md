@@ -45,13 +45,13 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 <div class="row">
 
-<div class="col-3">
+<div class="col-4">
 <figure>
 <img src="/static/images/everyone-dies.webp" >
 </figure>
 
 </div>
-<div class="col-9">
+<div class="col-8">
 
 - Aaron, a mercenary archer with a murderous past.
 - Bram, a man who lives by winning contests of skill.
