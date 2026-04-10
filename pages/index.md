@@ -12,7 +12,7 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 
 <div class="col-4">
 <figure>
-<img src="/static/images/the-curse.small.png" >
+<a href="/list-signup" target="_blank"><img src="/static/images/the-curse.small.png" ></a>
 </figure>
 
 </div>
@@ -47,7 +47,7 @@ A tale of petty cruelties and catastrophic consequences, where a lover's wounded
 
 <div class="col-4">
 <figure>
-<img src="/static/images/everyone-dies.webp" >
+<a href="/arc" target="_blank"><img src="/static/images/everyone-dies.webp" ></a>
 </figure>
 
 </div>
@@ -69,7 +69,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 **Releasing May 20, 2026 on Amazon**
 
-*If you want to read "Everyone Dies" for free, you can request an advance copy now. In return you agree to leave a review after the book launches May 20 on Amazon.*
+*If you want to read "Everyone Dies" for free, you can request an advance copy now. In return please leave a review after the book launches May 20 on Amazon.*
 
 <a class="btn btn-primary" href="/arc">Request a free advanced review copy</a>
 
