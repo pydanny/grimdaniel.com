@@ -10,7 +10,7 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 
 <div class="col-3">
 <figure>
-<a href="/list-signup" target="_blank"><img src="/static/images/the-curse.small.png" ></a>
+<a href="/the-curse" target="_blank"><img src="/static/images/the-curse.small.png" ></a>
 </figure>
 
 </div>
