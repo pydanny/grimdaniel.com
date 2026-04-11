@@ -166,6 +166,9 @@ def Header():
                 air.Li(
                     air.A('About', href='/about'),
                 ),
+                air.Li(
+                    air.A('Newsletter', href=newsletter.url()),
+                ),                
                 class_='navbar-menu',
             ),
             class_='container',
@@ -274,7 +277,8 @@ def newsletter():
         air.Title(title),
         air.H1(title),
         air.Div(air.Raw(markdown("""
-My newsletter on grimdark fiction comes out every week or two. Previous editions are listed here within two weeks after mailout. Signup and you'll receive FREE access to "The Curse", prelude to "Everyone Dies." Unsubscribe anytime.
+My newsletter on grimdark fiction comes out every week or two. Previous newsletters are listed here within two weeks after mailout.
+Signup and you'll receive FREE access to "[The Curse](/the-curse)", prelude to "[Everyone Dies](/everyone-dies)." Unsubscribe anytime.
 
 <a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the Not Dead Yet Newsletter</a>"""))),
         air.H2("Past editions of the newsletter"),
