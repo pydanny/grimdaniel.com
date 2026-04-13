@@ -291,6 +291,23 @@ Signup and you'll receive FREE access to "[The Curse](/the-curse)", prelude to "
     )
 
 @app.page
+def reviews():
+    title = "Book reviews of other author's works"
+    posts =  pathlib.Path('pages/reviews/').glob('*.md')
+
+    return mucss(        
+        Header(),
+        air.Title(title),
+        air.H1(title),
+        air.Ol(
+            *[air.Li(air.A(x.stem, href=page_or_redirect.url(slug=f'reviews/{x.stem}'))) for x in posts]
+        ),
+        Footer(title),
+        theme='red',
+        force_dark_mode=True
+    )
+
+@app.page
 def signed_up(request: air.Request):
         return jinja(
         request,
