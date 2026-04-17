@@ -168,7 +168,10 @@ def Header():
                 ),
                 air.Li(
                     air.A('Newsletter', href=newsletter.url()),
-                ),                
+                ),  
+                air.Li(
+                    air.A('Reviews', href=reviews.url()),
+                ),                                  
                 class_='navbar-menu',
             ),
             class_='container',
@@ -200,6 +203,7 @@ def index(request: air.Request):
 
 
 redirects = json.loads(pathlib.Path("redirects.json").read_text())
+    
 
 def MarkdownPage(slug: str):
     """Renders a non-sequential markdown file"""
@@ -222,6 +226,7 @@ def MarkdownPage(slug: str):
         twitter_image = f'https://grimdaniel.com{twitter_image}'
     author = content["attributes"].get("author", "")
     text = markdown(content["body"])
+    breadcrumbs = content["attributes"].get("breadcrumbs", [])
     return mucss(
         air.Meta(charset='UTF-8'),
         air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
@@ -293,14 +298,13 @@ Signup and you'll receive FREE access to "[The Curse](/the-curse)", prelude to "
 @app.page
 def reviews():
     title = "Book reviews of other author's works"
-    posts =  pathlib.Path('pages/reviews/').glob('*.md')
-
+    reviews =  pathlib.Path('pages/reviews/').glob('*.md')
     return mucss(        
         Header(),
         air.Title(title),
         air.H1(title),
         air.Ol(
-            *[air.Li(air.A(x.stem, href=page_or_redirect.url(slug=f'reviews/{x.stem}'))) for x in posts]
+            *[air.Li(air.A(Frontmatter.read_file(x)['attributes']['title'], href=page_or_redirect.url(slug=f'reviews/{x.stem}'))) for x in reviews]
         ),
         Footer(title),
         theme='red',
