@@ -276,13 +276,12 @@ def MarkdownPage(slug: str):
 def newsletter():
     title = 'The Not Dead Yet Newsletter'
     posts =  pathlib.Path('pages/newsletter/').glob('*.md')
-
     return mucss(        
         Header(),
         air.Title(title),
         air.H1(title),
         air.Div(air.Raw(markdown("""
-My newsletter on grimdark fiction comes out every week or two. Previous newsletters are listed here within two weeks after mailout.
+My newsletter on grimdark fiction is sent out every week on Friday. Previous newsletters are listed here within two weeks after mailout.
 Signup and you'll receive FREE access to "[The Curse](/the-curse)", prelude to "[Everyone Dies](/everyone-dies)." Unsubscribe anytime.
 
 <a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the Not Dead Yet Newsletter</a>"""))),
