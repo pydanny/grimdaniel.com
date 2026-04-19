@@ -292,7 +292,8 @@ Signup and you'll receive FREE access to "[The Curse](/the-curse)", prelude to "
 <a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the Not Dead Yet Newsletter</a>"""))),
         air.H2("Past editions of the newsletter"),
         air.Ol(
-            *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in newsletters]
+            *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in newsletters],
+            reversed=True
         ),
         Footer(title),
         theme='red',
