@@ -309,7 +309,7 @@ def reviews():
         air.Title(title),
         air.H1(title),
         air.Ol(
-            *[air.Li(air.A(Frontmatter.read_file(x)['attributes']['title'], href=page_or_redirect.url(slug=f'reviews/{x.stem}'))) for x in reviews]
+            *[air.Li(air.A(Frontmatter.read_file(x)['attributes']['title'].replace('Review: ', ''), href=page_or_redirect.url(slug=f'reviews/{x.stem}'))) for x in reviews]
         ),
         Footer(title),
         theme='red',
