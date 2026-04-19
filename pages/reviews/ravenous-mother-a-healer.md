@@ -18,6 +18,6 @@ One thing I noted is that all the people around him, regardless of their stateme
 
 From the very start to the end, every scene has its place. This makes reading the book a thrill, as there's no fluff. Descriptions are full of detail yet don't get in the way of the story. The world is unique and different, but not so much that it got in the way of the storytelling. 
 
-If there's a flaw I can point out, there's one scene where he is talking to a father and son where the mood of the relationship seems a little off. That said, is from Khulekani's point of view, so it might be tied to his misreading of social cues.
+If there's a flaw I can point out, there's one scene where he is talking to a father and son where the mood of the relationship seems a little off. That said, the scene is from Khulekani's point of view, so it might be tied to his misreading of social cues.
 
 In summary, this is a fascinating and excellent read in the grimdark genre. I look forward to more from the author.

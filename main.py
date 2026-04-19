@@ -275,7 +275,12 @@ def MarkdownPage(slug: str):
 @app.page
 def newsletter():
     title = 'The Not Dead Yet Newsletter'
-    posts =  pathlib.Path('pages/newsletter/').glob('*.md')
+    newsletters = sorted(
+        [x for x in pathlib.Path('pages/newsletter/').glob('*.md')
+         if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 8 or x.stem=='2024-04-10'],
+        reverse=True
+    )
+
     return mucss(        
         Header(),
         air.Title(title),
@@ -287,7 +292,7 @@ Signup and you'll receive FREE access to "[The Curse](/the-curse)", prelude to "
 <a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the Not Dead Yet Newsletter</a>"""))),
         air.H2("Past editions of the newsletter"),
         air.Ol(
-            *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in posts]
+            *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in newsletters]
         ),
         Footer(title),
         theme='red',
