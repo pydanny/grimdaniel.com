@@ -185,12 +185,11 @@ def index(request: air.Request):
     return MarkdownPage('index')
 
 
-redirects = json.loads(pathlib.Path("redirects.json").read_text())
+redirect_items = json.loads(pathlib.Path("redirects.json").read_text())
 
 
 def Footer(title: str, slug: str = ''):
     dirs = [x for x in slug.split('/')[:-1]]
-    print(dirs)
     return air.Footer(
         air.Nav(
             air.Ul(
@@ -315,6 +314,18 @@ def signed_up(request: air.Request):
         name="signed_up.html"
     )
 
+@app.page
+def redirects():
+    return mucss(
+        Header(),
+        air.Ol(
+            *[air.Li(x,": " , air.A(redirect_items[x], href=redirect_items[x], target='_blank')) for x in redirect_items]
+        ),
+        Footer('Redirects'),
+        theme='red',
+        force_dark_mode=True
+    )        
+
 
 @app.get("/robots.txt")
 def robots_txt(request: air.Request):
@@ -322,7 +333,7 @@ def robots_txt(request: air.Request):
 
 @app.get("/{slug:path}")
 async def page_or_redirect(slug: str):
-    redirects_url = redirects.get(slug, None)
+    redirects_url = redirect_items.get(slug, None)
     if redirects_url is not None:
         return air.RedirectResponse(redirects_url)
     try:
