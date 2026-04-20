@@ -30,6 +30,8 @@ I found the romantic relationship Kostya experienced quite charming. Sometimes t
 
 If there is a flaw I can point out, there were a few places when Kostya understood a non-Ukrainian language around him, when it wasn't clear if he knew the language. The book is in third-person, and it doesn't hurt the story, but in a few places it was jarring. I hope this is corrected in future editions of the book and addressed in the sequel.
 
+In summary, this is a fun and exciting read. If all this happened to the real Kostya, he lived a hard yet amazing life. Even if there is embellishment, a fraction of the story would make for an amazing life. While not in the dark fantasy genre I often prefer, the foundation in history makes the dark aspects of this book hit hard. I look forward to more from the author.
+
 <a href="https://storyoriginapp.com/universalbooklinks/25ac221e-32be-11f1-9027-0786a1c426b8" class="btn btn-primary" target="_blank">Buy "Kostya" on Amazon</a>
 
 </div>
