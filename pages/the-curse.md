@@ -1,6 +1,6 @@
 ---
 title: "The Curse"
-description: "Some evils should never be woken."
+description: "Some evils should never be woken. Free when you sign up for the newsletter."
 author: Daniel Roy Greenfeld
 image: "/static/images/the-curse-twitter-card.png"
 twitter_image: "/static/images/the-curse-twitter-card.png"
