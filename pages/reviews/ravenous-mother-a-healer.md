@@ -2,11 +2,19 @@
 title: "Review: Ravenous Mother - A Healer"
 description: My review of the first book in the Ravenous Mother biopunk series.
 date: 2026-04-14
-breadcrumbs:
-    - "[Home](/)"
-    - "[reviews](/reviews)"
-    - "Not Dead Yet Newsletter #1"
 ---
+
+<div class="row">
+
+<div class="col-3">
+<figure>
+<a href="https://kendiro.com/books.html#healer" target="_blank">
+    <img src="/static/other-books/healer.jpg" >
+</a>
+</figure>
+
+</div>
+<div class="col-9">
 
 ## This book pulls no punches
 
@@ -21,3 +29,8 @@ From the very start to the end, every scene has its place. This makes reading th
 If there's a flaw I can point out, there's one scene where he is talking to a father and son where the mood of the relationship seems a little off. That said, the scene is from Khulekani's point of view, so it might be tied to his misreading of social cues.
 
 In summary, this is a fascinating and excellent read in the grimdark genre. I look forward to more from the author.
+
+<a href="https://kendiro.com/books.html#healer" class="btn btn-primary" target="_blank">Buy "A Healer" on Amazon</a>
+
+</div>
+</div>

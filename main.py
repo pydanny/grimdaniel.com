@@ -180,13 +180,24 @@ def Header():
     )  
 
 
-def Footer(title):
+@app.page
+def index(request: air.Request):
+    return MarkdownPage('index')
+
+
+redirects = json.loads(pathlib.Path("redirects.json").read_text())
+
+
+def Footer(title: str, slug: str = ''):
+    dirs = [x for x in slug.split('/')[:-1]]
+    print(dirs)
     return air.Footer(
         air.Nav(
             air.Ul(
                 air.Li(
                     air.A('Home', href='/'),
                 ),
+                *[air.Li(air.A(x, href=f'/{x}')) for x in dirs],
                 air.Li(title, aria_current='page'),
                 class_='breadcrumb',
             ),
@@ -194,15 +205,9 @@ def Footer(title):
         ),   
         air.P(air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld")),     
         class_='container'
-    )    
+    )
 
 
-@app.page
-def index(request: air.Request):
-    return MarkdownPage('index')
-
-
-redirects = json.loads(pathlib.Path("redirects.json").read_text())
     
 
 def MarkdownPage(slug: str):
@@ -252,20 +257,7 @@ def MarkdownPage(slug: str):
             air.Br() if description else '',
             air.Div(air.Raw(text)),
         ),
-        air.Footer(
-            air.Nav(
-                air.Ul(
-                    air.Li(
-                        air.A('Home', href='/'),
-                    ),
-                    air.Li(title, aria_current='page'),
-                    class_='breadcrumb',
-                ),
-                aria_label='Breadcrumb',
-            ),   
-            air.P(air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld")),     
-            class_='container'
-        ),
+        Footer(title, slug),
         title=title,
         description=content["attributes"].get("description", ""),
         theme='red',
