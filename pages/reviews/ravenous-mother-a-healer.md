@@ -1,6 +1,6 @@
 ---
 title: "Review: Ravenous Mother - A Healer"
-description: My review of the first book in the Ravenous Mother biopunk series.
+description: My review of the first book in the Ravenous Mother biopunk series. ⭐⭐⭐⭐⭐
 date: 2026-04-14
 ---
 

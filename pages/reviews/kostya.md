@@ -1,6 +1,6 @@
 ---
 title: "Review: Kostya"
-description: My review of a book based on a true story.
+description: My review of a book based on a true story. ⭐⭐⭐⭐⭐
 date: 2026-04-20
 image: "/static/newsletters/kostya.jpg"
 twitter_image: "/static/newsletters/kostya.jpg"
