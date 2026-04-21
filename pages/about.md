@@ -5,7 +5,7 @@ image: "/static/images/the-curse.png"
 twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
 
-Daniel Roy Greenfeld is the Amazon best-selling co-author of a series of non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for [NASA](https://nasa.gov/) and [Kraken Tech](https://kraken.tech/), the largest renewable energy tech company on the planet. He has authored many popular open-source utility libraries, which are in production use by thousands of organizations, including Fortune 500 companies.
+Daniel Roy Greenfeld is the Amazon best-selling co-author non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for [NASA](https://nasa.gov/) and [Kraken Tech](https://kraken.tech/), the largest renewable energy tech company on the planet. He has authored many popular open-source utility libraries, which are in production use by thousands of organizations, including Fortune 500 companies.
 
 After a ten year hiatus he has  started writing fantasy again. This time the writing is in a darker style. Long has he wanted to write stories where characters die like fruitflies.
 
