@@ -115,6 +115,8 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
 
     return air.Html(
         air.Head(
+            air.Meta(charset='UTF-8'),
+            air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
             air.Link(
                 rel="stylesheet",
                 href=f"https://unpkg.com/@digicreon/mucss/dist/mu.{theme}.css",
