@@ -234,8 +234,6 @@ def MarkdownPage(slug: str):
     text = markdown(content["body"])
     breadcrumbs = content["attributes"].get("breadcrumbs", [])
     return mucss(
-        air.Meta(charset='UTF-8'),
-        air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
         air.Meta(name='description', content=social_description),
         air.Meta(property='og:title', content=social_title),
         air.Meta(property='og:description', content=social_description),
