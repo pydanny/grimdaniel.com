@@ -268,7 +268,7 @@ def newsletter():
     title = 'The Not Dead Yet Newsletter'
     newsletters = sorted(
         [x for x in pathlib.Path('pages/newsletter/').glob('*.md')
-         if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 8 or x.stem=='2024-04-10'],
+         if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 1],
         reverse=True
     )
 
