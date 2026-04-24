@@ -1,7 +1,8 @@
 ---
 title: "The Curse"
-description: "Some evils should never be woken. Free when you sign up for the newsletter."
+description: "Some evils should never be woken. Shortstory prequel to \"Everyone Dies.\" Free when you sign up for the newsletter."
 author: Daniel Roy Greenfeld
+order: 0
 image: "/static/images/the-curse-twitter-card.png"
 twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
@@ -10,7 +11,7 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 
 <div class="col-3">
 <figure>
-<a href="/the-curse" target="_blank"><img src="/static/images/the-curse.small.png" ></a>
+<a href="/books/the-curse" target="_blank"><img src="/static/images/the-curse.small.png" ></a>
 </figure>
 
 </div>

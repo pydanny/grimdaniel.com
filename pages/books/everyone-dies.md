@@ -2,6 +2,7 @@
 title: "Everyone Dies"
 description: "Seven companions walk a path no one survives. Sign up to join the ARC program."
 author: Daniel Roy Greenfeld
+order: 1
 image: "/static/images/everyone-dies.jpg"
 twitter_image: "/static/images/everyone-dies.jpg"
 ---

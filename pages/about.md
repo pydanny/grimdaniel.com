@@ -22,5 +22,5 @@ His writing follows these six themes that are common to the grimdark fantasy gen
 
 Here are the stories featured on this website, either of which you can read today for FREE by clicking the links on the story titles:
 
-- [The Curse](/the-curse) - About the awakening of evil in a quiet mountain village.
-- [Everyone Dies](/everyone-dies) - Seven companions walk a path no one survives.
+- [The Curse](/books/the-curse) - About the awakening of evil in a quiet mountain village.
+- [Everyone Dies](/books/everyone-dies) - Seven companions walk a path no one survives.
