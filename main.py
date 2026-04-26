@@ -207,7 +207,17 @@ def Footer(title: str, slug: str = ''):
             ),
             aria_label='Breadcrumb',
         ),   
-        air.P(air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld")),     
+        air.P(
+            air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld"),
+        ),     
+        air.P(
+            air.A(air.Img(src='/static/images/goodreads.png'), target="_blank", href='https://goodreads.com/author/show/7426915'),                        
+            ' ',
+            air.A(air.Img(src='/static/images/amazon-author.png'), target="_blank", href='https://www.amazon.com/daniel-roy-greenfeld/e/B00CCSVG7E?tag=mlinar-20'),
+            ' ',            
+            air.A(air.Img(src='/static/images/facebook.png'), target="_blank", href='https://facebook.com/danielfeldroy'),
+
+        ),
         class_='container'
     )
 
