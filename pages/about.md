@@ -5,9 +5,9 @@ image: "/static/images/the-curse.png"
 twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
 
-Daniel Roy Greenfeld is the Amazon best-selling co-author non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for [NASA](https://nasa.gov/). He has authored many popular open-source utility libraries, which are in production use by thousands of organizations, including Fortune 500 companies.
+Daniel Roy Greenfeld is the Amazon best-selling co-author non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for [NASA](https://nasa.gov/). He has authored many popular open-source utility libraries, which are in production use by thousands of organizations, including Fortune 500 companies. He is also a husband and a father.
 
-After a ten year hiatus he has  started writing fantasy again. This time the writing is in a darker style. Long has he wanted to write stories where characters die like fruitflies.
+He has decided to make the leap from non-fiction to fiction writing. He writes grimdark fantasy stories in the vein of Mark Lawrence, Michael R. Fletcher, and Anna Smith Spark. Long has he wanted to write stories where characters die like fruitflies.
 
 For inspiration he draws on decades of reading fiction and researching history. Supplementing this is years of weapons combat training in Kendo, fencing, FMA, and HEMA. He has a blue belt in Brazilian Jiu-Jitsu, a third-degree black belt in Tae Kwon Do, and seven years of classes in both Muay Thai and Capoeira. He's also spent a fair amount of time riding horses.
 
