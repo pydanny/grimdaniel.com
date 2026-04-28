@@ -216,6 +216,11 @@ def Footer(title: str, slug: str = ''):
             air.A(air.Img(src='/static/images/amazon-author.png'), target="_blank", href='https://www.amazon.com/daniel-roy-greenfeld/e/B00CCSVG7E?tag=mlinar-20'),
             ' ',            
             air.A(air.Img(src='/static/images/facebook.png'), target="_blank", href='https://facebook.com/danielfeldroy'),
+            ' ',            
+
+            air.A(air.Img(src='/static/images/bookbub.svg', height=25, width=25), target="_blank", href='https://www.bookbub.com/profile/daniel-roy-greenfeld'),            
+            ' ',            
+            air.A(air.Img(src='/static/images/booksirens.png', height=25, width=25), target="_blank", href='https://booksirens.com/author/JVU6Z61/G8DUQLE'),                        
 
         ),
         class_='container'
