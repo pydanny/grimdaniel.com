@@ -18,3 +18,9 @@
 .center-text {
   text-align: center;
 }
+
+.borderCircle {
+  border-radius: 9999px;
+  margin-bottom: 0rem;
+  text-decoration: none;
+}  

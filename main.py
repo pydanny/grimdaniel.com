@@ -220,7 +220,7 @@ def Footer(title: str, slug: str = ''):
 
             air.A(air.Img(src='/static/images/bookbub.svg', height=25, width=25), target="_blank", href='https://www.bookbub.com/profile/daniel-roy-greenfeld'),            
             ' ',            
-            air.A(air.Img(src='/static/images/booksirens.png', height=25, width=25), target="_blank", href='https://booksirens.com/author/JVU6Z61/G8DUQLE'),                        
+            air.A(air.Img(src='/static/images/booksirens.png', height=25, width=25, class_="borderCircle"), target="_blank", href='https://booksirens.com/author/JVU6Z61/G8DUQLE'),                        
 
         ),
         class_='container'
