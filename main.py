@@ -342,7 +342,11 @@ def redirects():
 
 @app.get("/robots.txt")
 def robots_txt(request: air.Request):
-    return air.responses.PlainTextResponse(Path('templates/robots.txt').read_text())
+    return air.responses.PlainTextResponse(pathlib.Path('templates/robots.txt').read_text())
+
+@app.get("/sitemap.xml")
+def robots_txt(request: air.Request):
+    return air.responses.PlainTextResponse(pathlib.Path('templates/sitemap.xml').read_text())
 
 @app.get("/{slug:path}")
 async def page_or_redirect(slug: str):
