@@ -23,4 +23,8 @@
   border-radius: 9999px;
   margin-bottom: 0rem;
   text-decoration: none;
-}  
+}
+
+.redline {
+  border: 2px solid red;
+}
