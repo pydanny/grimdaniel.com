@@ -264,6 +264,7 @@ def MarkdownPage(slug: str):
         air.Meta(name='twitter:title', content=social_title),
         air.Meta(name='twitter:description', content=social_description),     
         air.Title(social_title),
+        air.Link(rel='icon', href='/static/favicon.ico', sizes='any'),
         Header(),
         air.Section(
             air.H1(title) if title != 'Grimdaniel' else '',
