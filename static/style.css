@@ -28,3 +28,7 @@
 .redline {
   border: 2px solid red;
 }
+
+.w399 {
+  max-width: 399px;
+}
