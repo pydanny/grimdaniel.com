@@ -5,7 +5,7 @@ image: "/static/images/the-curse.png"
 twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
 
-Based in Manila and London, Daniel Roy Greenfeld is the Amazon best-selling co-author of non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for [NASA](https://nasa.gov/). He has authored many [popular open-source utility libraries](https://github.com/pydanny), which are in production use by thousands of organizations, including Fortune 500 companies. He is a husband and a father.
+Based in London and Manila, Daniel Roy Greenfeld is the Amazon best-selling co-author of non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for [NASA](https://nasa.gov/). He has authored many [popular open-source utility libraries](https://github.com/pydanny), which are in production use by thousands of organizations, including Fortune 500 companies. He is a husband and a father.
 
 He has decided to make the leap from non-fiction to fiction writing. Long has he wanted to write stories where characters die like fruitflies. He writes grimdark fantasy stories in the vein of Mark Lawrence, Michael R. Fletcher, and Anna Smith Spark. 
 
