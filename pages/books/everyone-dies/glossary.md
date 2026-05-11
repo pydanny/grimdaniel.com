@@ -22,10 +22,6 @@ The great spirit or diety who created the world. Since this momentous event, the
 
 A usually single-edged one-handed sword with one straight side and the other being curved out. Usually made with a proper hilt. Great for cutting. A step up from a knife-hilted sword, but not the same as an arming sword.
 
-## Fate
-
-TODO
-
 ## Great Lake
 
 A sea-sized large freshwater lake that is the Eastern border of both the Kingdom of Namayan and the Northern border of the Kingdom of the Lake.
@@ -81,6 +77,17 @@ An empire that came from across the sea in great ships powered by powerful magic
 
 A five- or six-foot long ironshod staff with a complicated head that includes an axe for chopping and hooking, a pick for punching through armor, and a spike for stabbing. Used often on the field of battle and never carried into court or polite company.
 
+## Seer
+
+A person with the ability to see future and often past events. This is because they can observe the Song of Fate at great depth. Seers always have the talent to perform other kinds of magic. Many seers are driven mad by their knowledge, as they often know how they themselves will die.
+
+## Song of Fate
+
+To create the world, the Creator sang the Song of Fate. This is what defined all the words of the Old Speech, and told the story of the world. Destiny was predetermined at the outset of time, with each person being allotted their time. 
+
+Most people cannot sense the Song of Fate. Wizards can sense a limited portion of it that applies to the current time, and call it the "great pattern". This often binds them from using their otherwise immense powers. They do this because to break the pattern invites dangerous events. 
+
+## Wight
 
 ## Witches
 
@@ -97,3 +104,5 @@ Also called "mages", wizards touch the forces of creation, but cannot in themsel
 By mastering the true names of things Wizards can control and in some cases change those things. Typical powers include protections and wards, encouraging nature to do what it wants to do (rain, avalanche, water springs, etc), controlling of animals, control of people who have foolishly given up their true names, personal shapechanging, generation of light or illusions or wind or fire, destroying of magical deceptions, and seeing into the Quiet Lands.
 
 Wizards learn their art on the Island of Knowledge in the Great Lake, which takes students from all nations. Students who don't earn the wizard's staff are called 'Sorcerers,' and are generally easier to find than full wizards.
+
+## Zombie
