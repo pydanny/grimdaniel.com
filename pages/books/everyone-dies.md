@@ -36,7 +36,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 *If you want to read "Everyone Dies" for free, you can request a free advance copy now. In return you agree to leave a review after the book launches May 20 on Amazon.*
 
-<a class="btn btn-primary" href="/arc">Request a free advanced review copy</a>
+<a class="btn btn-primary" href="/preorder-everyone-dies">Request a free advanced review copy</a>
 
 </div>
 </div>
