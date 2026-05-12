@@ -6,9 +6,9 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
 
 
-## Alinam, City
+## Alinam City
 
-A large city on the Great River delta leading into Alimam bay.
+A large city on the Great River delta leading into Alinam Bay.
 
 ## Arming Sword
 
@@ -32,7 +32,7 @@ A sea-sized large freshwater lake that is the Eastern border of both the Kingdom
 
 Directly analagous to the longsword of 13th-15th century Europe, this is an approximately four foot long weapon with a straight, pointed blade and two handed hilt. Best used with both hands. Sometimes called a "bastard sword" or "hand-and-a-half sword".
 
-## Knife-hilted swords
+## Knife-Hilted Swords
 
 Swords with knife-style hilts, cheaper than normal hilts and often used by commoners. Also called 'messer' swords
 
@@ -55,7 +55,7 @@ People of Namayan often refer to people in this kingdom as 'Southrons'.
 
 A seafaring race of warlike nomads. They brought down the weakened Old Empire and took over. The upper classes are mostly of this stock, and marriage is prohibited.
 
-## Nataab
+## Nataab
 
 The mountainous land across the Alinam Bay. Sparsely populated, heavily wooded, and very rugged terrain.
 
