@@ -6,6 +6,12 @@ image: "/static/images/the-curse.png"
 twitter_image: "/static/images/the-curse-twitter-card.png"
 ---
 
+<p>
+  <a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank">
+    <img alt="image" src="/static/newsletters/everyone-dies-preorder.webp"  class="redline" style="height: auto; max-width: 100%; display: block; margin: auto;">
+  </a>
+</p>
+
 ## Book 0: The Curse
 
 <div class="row">
@@ -68,8 +74,6 @@ Everyone dies.
 A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 **Releasing May 20, 2026 on Amazon**
-
-*If you want to read "Everyone Dies" for free, you can request an advance copy now. In return please leave a review after the book launches May 20 on Amazon.*
 
 <a class="btn btn-primary" href="/preorder-everyone-dies">Preorder on Amazon</a>
 
