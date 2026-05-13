@@ -7,6 +7,8 @@ from fastapi import HTTPException
 import mistletoe
 from functools import partial
 from datetime import datetime
+from feedgen.feed import FeedGenerator
+from dateutil import parser
 
 markdown = partial(mistletoe.markdown)
 
@@ -19,6 +21,8 @@ jinja = air.JinjaRenderer(directory="templates")
 
 HEADER_TAG_TYPES = (air.Header,)
 FOOTER_TAG_TYPES = (air.Footer,)
+
+DOMAIN = 'https://grimdaniel.com'
 
 # TODO add theme color enumerator for muCss
 
@@ -217,10 +221,11 @@ def Footer(title: str, slug: str = ''):
             ' ',            
             air.A(air.Img(src='/static/images/facebook.png'), target="_blank", href='https://facebook.com/danielfeldroy'),
             ' ',            
-
             air.A(air.Img(src='/static/images/bookbub.svg', height=25, width=25), target="_blank", href='https://www.bookbub.com/profile/daniel-roy-greenfeld'),            
             ' ',            
             air.A(air.Img(src='/static/images/booksirens.png', height=25, width=25, class_="borderCircle"), target="_blank", href='https://booksirens.com/author/JVU6Z61/G8DUQLE'),                        
+            ' ',            
+            air.A('atom.xml', target="_blank", href='/atom.xml'),                                    
 
         ),
         class_='container'
@@ -353,6 +358,65 @@ def robots_txt(request: air.Request):
 @app.get("/sitemap.xml")
 def robots_txt(request: air.Request):
     return air.responses.PlainTextResponse(pathlib.Path('templates/sitemap.xml').read_text())
+
+def convert_dtstr_to_dt(date_str):
+    """
+    Convert a naive or non-naive date/datetime string to a datetime object.
+    Naive datetime strings are assumed to be in GMT (UTC) timezone.
+
+    Args:
+        date_str (str): The date or datetime string to convert.
+
+    Returns:
+        datetime: The corresponding datetime object.
+    """
+    try:
+        dt = parser.parse(date_str)
+        if dt.tzinfo is None:
+            # If the datetime object is naive, set it to GMT (UTC)
+            dt = dt.replace(tzinfo=pytz.UTC)
+        return dt
+    except (ValueError, TypeError) as e:
+        print(f"Error parsing date string: {e}")
+        return None
+
+@app.get('/atom.xml')
+def atom_feed():
+    newsletters = sorted(
+        [x for x in pathlib.Path('pages/newsletter/').glob('*.md')
+         if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 1],
+        reverse=True
+    )
+    fg = FeedGenerator()
+    fg.id(DOMAIN)    
+    fg.author(
+        {
+            "name": "Daniel Roy Greenfeld",
+            "email": "notdeadyet@grimdaniel.com",
+            "uri": DOMAIN,
+        }
+    )    
+    fg.link(href=DOMAIN, rel="alternate")
+    fg.rights(f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld")
+    fg.language("en")    
+    fg.title("Grimdaniel isn't dead yet")
+    fg.atom_str(pretty=True)
+    for newsletter in newsletters:
+        fe = fg.add_entry()
+        content = Frontmatter.read_file(newsletter)
+        metadata = content["attributes"]
+        linker = f"{DOMAIN}{str(newsletter)[5:-3]}"
+        fe.id(linker)
+        fe.link(href=linker)        
+        print(linker)
+        fe.title(str(metadata["title"]))
+        fe.summary(metadata.get("description"))        
+        fe.content(markdown(content['body']), type="html")
+        fe.author([{"name": "Daniel Roy Greenfeld", "email": "daniel@feldroy.com"}])
+        fe.pubDate(convert_dtstr_to_dt(metadata["date"]))
+        fe.updated(convert_dtstr_to_dt(metadata["date"]))        
+
+    return air.responses.Response(content=fg.atom_str(pretty=True),media_type="application/xml")
 
 @app.get("/{slug:path}")
 async def page_or_redirect(slug: str):
