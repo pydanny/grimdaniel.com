@@ -225,7 +225,7 @@ def Footer(title: str, slug: str = ''):
             ' ',            
             air.A(air.Img(src='/static/images/booksirens.png', height=25, width=25, class_="borderCircle"), target="_blank", href='https://booksirens.com/author/JVU6Z61/G8DUQLE'),                        
             ' ',            
-            air.A('atom.xml', target="_blank", href='/atom.xml'),                                    
+            air.A('Feed: atom.xml', target="_blank", href='/atom.xml'),                                    
 
         ),
         class_='container'
