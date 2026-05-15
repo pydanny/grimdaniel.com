@@ -12,7 +12,9 @@ twitter_image: "https://grimdaniel.com/static/newsletters/everyone-dies-preorder
 
 <div class="col-3">
 <figure>
+<a href="/preorder-everyone-dies">
 <img src="/static/images/everyone-dies.webp" >
+</a>
 </figure>
 
 </div>
