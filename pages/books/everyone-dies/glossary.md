@@ -14,6 +14,10 @@ A large city on the Great River delta leading into Alinam Bay.
 
 A straight, two-edged sword good for cuts and thrusts. The predecessor of the longsword, and the traditional sword of the Melikki people. Forbidden for commoners to use and is part of the heraldry of the Kingdom of Namayan. Still used by traditionalists, but being supplanted by the longsword.
 
+## Bram
+
+A man of common birth who lives by winning contests of skill. His best events are staff, wrestling, and throwing. Sometimes does bodyguard work.
+
 ## Creator
 
 The great spirit or diety who created the world. Since this momentous event, they sleep in the Quiet Lands, where the spirits of the dead are supposed to rest until the Creator awakens at the end of time.
