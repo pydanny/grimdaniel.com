@@ -4,6 +4,20 @@ description: A grimdark book with a beginning not for the faint of heart. ⭐⭐
 date: 2026-04-14
 ---
 
+<div class="row">
+
+<div class="col-3">
+<figure>
+<a href="hhttps://www.amazon.com/Oath-Ember-Origins-Book-1/dp/B0GRBF4N1L?tag=mlinar-20" target="_blank">
+    <img src="https://uploads.storyoriginapp.com/c/bc/e94cc0ef-182e-4a60-ac18-0cf0a7f393c2.jpg" >
+</a>
+</figure>
+
+</div>
+<div class="col-9">
+
+
+
 # Oath and Ember
 
 This book started with the protagonist in a good place, demonstrating competancy, compassion, and honesty. Unfortunate for them, this isn't a world that rewards such traits.
