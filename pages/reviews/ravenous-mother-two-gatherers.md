@@ -36,3 +36,4 @@ The finish of the book was magnificent. It really worked for me.
 If there's a flaw I can point out, it's that on initial release on kindle there was no indentation at the start of paragraphs. This meant periodic bleeding together of paragraphs on my reading device. I've notified the author, so hopefully by the time you read this excellent grimdark book it will be rectified.
 
 </div>
+</div>

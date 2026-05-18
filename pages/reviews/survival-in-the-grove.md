@@ -9,11 +9,11 @@ twitter_image: "https://uploads.storyoriginapp.com/c/bc/e9137f3c-5db9-40c3-a528-
 <div class="row">
 
 <div class="col-3">
-<figure>
-<a href="https://storyoriginapp.com/swaps/15f058dc-37b8-11f1-abe6-bfca4287443e?via=anduril" target="_blank">
-    <img src="/static/other-books/survival-in-the-grove.jpg" >
-</a>
-</figure>
+    <figure>
+    <a href="https://storyoriginapp.com/swaps/15f058dc-37b8-11f1-abe6-bfca4287443e?via=anduril" target="_blank">
+        <img src="/static/other-books/survival-in-the-grove.jpg" >
+    </a>
+    </figure>
 
 </div>
 <div class="col-9">
