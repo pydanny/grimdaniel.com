@@ -8,7 +8,7 @@ twitter_image: "/static/images/the-curse-twitter-card.png"
 
 <p>
   <a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank">
-    <img alt="image" src="/static/newsletters/everyone-dies-preorder.webp"  class="redline" style="height: auto; max-width: 100%; display: block; margin: auto;">
+    <img alt="image" src="/static/newsletters/everyone-dies-read-on-amazon.webp"  class="redline" style="height: auto; max-width: 100%; display: block; margin: auto;">
   </a>
 </p>
 
@@ -40,7 +40,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 **Releasing May 20, 2026 on Amazon**
 
-<a class="btn btn-primary" href="/preorder-everyone-dies">Preorder on Amazon</a>
+<a class="btn btn-primary" href="/read-everyone-dies">Read on Amazon</a>
 
 </div>
 </div>

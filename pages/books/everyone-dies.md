@@ -12,7 +12,7 @@ twitter_image: "https://grimdaniel.com/static/newsletters/everyone-dies-preorder
 
 <div class="col-3">
 <figure>
-<a href="/preorder-everyone-dies">
+<a href="/read-everyone-dies">
 <img src="/static/images/everyone-dies.webp" >
 </a>
 </figure>
@@ -36,7 +36,7 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 **Releasing May 20, 2026 on Amazon**
 
-<a class="btn btn-primary" href="/preorder-everyone-dies">Preorder on Amazon</a>
+<a class="btn btn-primary" href="/read-everyone-dies">Read on Amazon</a>
 
 </div>
 </div>
