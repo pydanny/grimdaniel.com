@@ -331,12 +331,12 @@ def reviews():
         force_dark_mode=True
     )
 
-@app.page
-def signed_up(request: air.Request):
-        return jinja(
-        request,
-        name="signed_up.html"
-    )
+# @app.page
+# def signed_up(request: air.Request):
+#         return jinja(
+#         request,
+#         name="signed_up.html"
+#     )
 
 @app.page
 def redirects():

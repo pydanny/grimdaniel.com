@@ -34,8 +34,6 @@ Everyone dies.
 
 A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
-**Releasing May 20, 2026 on Amazon**
-
 <a class="btn btn-primary" href="/read-everyone-dies">Read on Amazon</a>
 
 </div>
