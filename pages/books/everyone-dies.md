@@ -1,6 +1,6 @@
 ---
 title: "Everyone Dies"
-description: "Seven companions walk a path no one survives. Sign up to join the ARC program."
+description: "Seven companions walk a path no one survives."
 author: Daniel Roy Greenfeld
 order: 1
 image: "https://grimdaniel.com/static/newsletters/everyone-dies-preorder.webp"
@@ -37,4 +37,36 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 <a class="btn btn-primary" href="/read-everyone-dies">Read on Amazon</a>
 
 </div>
+</div>
+
+---
+
+## Seven companions walk a path no one survives.
+
+<div class="row">
+<div class="col-4">
+    <img src="/static/everyone-dies/fate-seer.jpg" class="redline">
+
+### Fate Is Already Waiting
+
+Shai sees the deaths ahead and still walks the path. His gift is not comfort. It is a map of the least terrible ending, drawn in fear, guilt, and forbidden magic.
+</div>
+
+<div class="col-4">
+    <img src="/static/everyone-dies/last-stand.jpg" class="redline">
+
+### The Companions Enter Her Domain
+
+A swordswoman, an archer, a fire mage, a seer, a wrestler, a woodcutter, and an old soldier step through the portal into the Lich Queen's country. Every victory makes the enemy stronger, closer, and more aware.    
+</div>
+
+<div class="col-4">
+    <img src="/static/everyone-dies/portal-swordswoman.jpg" class="redline">
+
+### The Last Stand Matters
+
+This is grimdark fantasy with a human pulse: doomed companions, hard choices, bitter loyalty, and deaths that change the battle. If no one survives, every moment of courage has to count.    
+</div>
+
+
 </div>
