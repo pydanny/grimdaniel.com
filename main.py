@@ -301,7 +301,7 @@ def newsletter():
         air.Title(title),
         air.H1(title),
         air.Div(air.Raw(markdown("""
-My newsletter on grimdark fiction is sent out every week on Friday. Previous newsletters are listed here a day after mailout.
+My newsletter on grimdark fiction is sent out every Friday a few minutes after 11AM GMT. Previous newsletters are listed here a day after mailout.
 Signup and you'll receive FREE access to "[The Curse](/books/the-curse)", prelude to "[Everyone Dies](/books/everyone-dies)." Unsubscribe anytime.
 
 <a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the "Not Dead Yet" Newsletter</a>"""))),
