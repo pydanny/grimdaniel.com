@@ -301,7 +301,7 @@ def newsletter():
         air.Title(title),
         air.H1(title),
         air.Div(air.Raw(markdown("""
-My newsletter on grimdark fiction is sent out every week on Friday. Previous newsletters are listed here within two weeks after mailout.
+My newsletter on grimdark fiction is sent out every week on Friday. Previous newsletters are listed here a day after mailout.
 Signup and you'll receive FREE access to "[The Curse](/books/the-curse)", prelude to "[Everyone Dies](/books/everyone-dies)." Unsubscribe anytime.
 
 <a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the "Not Dead Yet" Newsletter</a>"""))),
@@ -330,13 +330,6 @@ def reviews():
         theme='red',
         force_dark_mode=True
     )
-
-# @app.page
-# def signed_up(request: air.Request):
-#         return jinja(
-#         request,
-#         name="signed_up.html"
-#     )
 
 @app.page
 def redirects():
