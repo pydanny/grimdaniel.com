@@ -56,7 +56,7 @@ Everyone dies.
 
 A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
-<a class="btn btn-primary" href="/read-everyone-dies">Read on Amazon</a>
+<a class="btn btn-primary" href="/read-everyone-dies" target="_blank">Read on Amazon</a>
 
 </div>
 </div>
