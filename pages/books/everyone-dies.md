@@ -3,8 +3,8 @@ title: "Everyone Dies"
 description: "Seven companions walk a path no one survives."
 author: Daniel Roy Greenfeld
 order: 1
-image: "https://grimdaniel.com/static/newsletters/everyone-dies-preorder.webp"
-twitter_image: "https://grimdaniel.com/static/newsletters/everyone-dies-preorder.webp"
+image: "https://grimdaniel.com/static/newsletters/everyone-dies-read-free-until-may-26.webp"
+twitter_image: "https://grimdaniel.com/static/newsletters/everyone-dies-read-free-until-may-26.webp"
 ---
 
 
