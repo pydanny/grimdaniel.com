@@ -2,13 +2,13 @@
 image: '/static/images/the-curse.webp'
 social_title: Grimdaniel
 social_description: In the works of Daniel Roy Greenfeld, evils that should never be woken walk the world and seven companions walk a path no one survives.
-image: "/static/newsletters/everyone-dies-read-free-until-may-26.webp"
-twitter_image: "/static/newsletters/everyone-dies-read-free-until-may-26.webp"
+image: "/static/newsletters/everyone-dies-read-on-amazon.webp"
+twitter_image: "/static/newsletters/everyone-dies-read-on-amazon.webp"
 ---
 
 <p>
   <a href="https://storyoriginapp.com/universalbooklinks/8c487a18-2b3e-11f1-aa1d-dfa5b3422a69" rel="noopener noreferrer" target="_blank">
-    <img alt="image" src="/static/newsletters/everyone-dies-read-free-until-may-26.webp"  class="redline" style="height: auto; max-width: 100%; display: block; margin: auto;">
+    <img alt="image" src="/static/newsletters/everyone-dies-read-on-amazon.webp"  class="redline" style="height: auto; max-width: 100%; display: block; margin: auto;">
   </a>
 </p>
 
