@@ -351,7 +351,7 @@ def robots_txt(request: air.Request):
     return air.responses.PlainTextResponse(pathlib.Path('templates/robots.txt').read_text())
 
 @app.get("/sitemap.xml")
-def robots_txt(request: air.Request):
+def sitemap_xml(request: air.Request):
     return air.responses.PlainTextResponse(pathlib.Path('templates/sitemap.xml').read_text())
 
 def convert_dtstr_to_dt(date_str):
