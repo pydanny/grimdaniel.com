@@ -439,7 +439,7 @@ def banners():
         Header(),
         air.Title('Banners'),
         air.H1('Banners'),
-        air.P('A random assortment of banners. Please click on the top image!'),
+        air.P('A random assortment of banners for promotions my books are in. Please click on the top image!'),
         *[Banner(b) for b in banners],   
         # [print(x) for x in banners],
         Footer('Banners'),
