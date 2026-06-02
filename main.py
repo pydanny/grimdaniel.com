@@ -9,6 +9,8 @@ from functools import partial
 from datetime import datetime
 from feedgen.feed import FeedGenerator
 from dateutil import parser
+from rich import print
+from random import shuffle
 
 markdown = partial(mistletoe.markdown)
 
@@ -410,6 +412,40 @@ def atom_feed():
         fe.updated(convert_dtstr_to_dt(metadata["date"]))        
 
     return air.responses.Response(content=fg.atom_str(pretty=True),media_type="application/xml")
+
+
+def Banner(banner):
+    return air.P(
+        air.A(
+            air.Img(src=banner['src'], class_='redline', style="height: auto; display: block; margin: auto;"),
+            rel="noopener noreferrer", target="_blank", href=banner['href']
+        ),
+    )
+
+@app.page
+def banners():
+    banners = []
+    for banner in json.loads(pathlib.Path('banners.json').read_text())['banners']:
+        if banner['src'] == 'xxxxx': 
+            continue
+        if (datetime.strptime(banner['start'], "%Y-%m-%d") - datetime.now()).days > 0:
+            continue
+        if (datetime.now() - datetime.strptime(banner['end'], "%Y-%m-%d")).days > 0:
+            continue        
+        banners.append(banner)
+
+    shuffle(banners)
+    return mucss(        
+        Header(),
+        air.Title('Banners'),
+        air.H1('Banners'),
+        air.P('A random assortment of banners. Please click on the top image!'),
+        *[Banner(b) for b in banners],   
+        # [print(x) for x in banners],
+        Footer('Banners'),
+        theme='red',
+        force_dark_mode=True
+    )    
 
 @app.get("/{slug:path}")
 async def page_or_redirect(slug: str):
