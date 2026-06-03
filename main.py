@@ -291,6 +291,7 @@ def MarkdownPage(slug: str):
         twitter_image = f"https://grimdaniel.com{twitter_image}"
     author = content["attributes"].get("author", "")
     text = markdown(content["body"])
+    text = text.replace("<a", '<a rel="noopener noreferrer" target="_blank" ')
     return mucss(
         air.Meta(name="description", content=social_description),
         air.Meta(property="og:title", content=social_title),
@@ -532,7 +533,6 @@ def banners():
             "A random assortment of banners for promotions my books are in. Please click on the top image!"
         ),
         *[Banner(b) for b in banners],
-        # [print(x) for x in banners],
         Footer("Banners"),
         theme="red",
         force_dark_mode=True,
