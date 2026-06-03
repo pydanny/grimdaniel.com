@@ -14,7 +14,7 @@ What's impressive about Khraen's weakness is that while it defines him, he never
 
 The secondary characters are well done. Khraen receives a lot more loyalty and love than he should from them, for reasons that are complex and twisted. They are the vehicle Khraen uses for justification for the sins he commits in this lifetime. It's an interesting literary trick, one that works quite well. 
 
-As for the world, we learn about it over the course of the series. It's a deep, complex world with distinct places and cultures. Early on, we learn so much about individuals, and it is a delight to read about. The author is able to instill a lot of feeling about places in brief paragraphs, a nice trick that I don't think he gets enough attention for doing.
+As for the world, we learn about it over the course of the series. It's a deep, complex world with distinct places and cultures. Early on, we learn so much about individual locations, and it is a delight to read about them. The author is able to instill a lot of feeling about places in brief paragraphs, a nice trick that I don't think he gets enough attention for doing.
 
 This is a fantasy story, and magic is powerful. Advanced users of magic are akin to superheroes or demigods, able to destroy individuals, cities, continents, and even whole worlds. "Riding a mountain into battle" is an incredible early turn of phrase, and it sets the tone for what people are able to do. It is also well-defined in defined schools, specifically demonology, wizardry, shamanism, elementalism, and necromancy.
 
