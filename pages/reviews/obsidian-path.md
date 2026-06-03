@@ -22,8 +22,8 @@ I liked the series conclusion. I'm rather good at figuring out mystery books, so
 
 There are some flaws to the series:
 
-- By the third book, the relationship between Khraen and Henka eventually felt repetitive, but this was fixed in the fourth book.
-- It is a horrific universe where horrific things happen with regularity. Be prepared to be shocked by some arguably overly horrific descriptions.
+- By the third book, the relationship between Khraen and Henka felt repetitive, but this was fixed in the fourth book.
+- It is a horrific universe where horrific things happen with regularity. Be prepared to be shocked by some of the descriptions.
 - There are places where the prose is arguably rough, but I always give that a pass in first-person writing. So long as the grammar is correct, I'm more forgiving when it comes to reading it from the point of view of the protagonist.
 
 In summary, this is a fascinating series in the grimdark genre. Read it if you want dark fantasy set in a high magic world rich with culture yet full of torture and murder.
