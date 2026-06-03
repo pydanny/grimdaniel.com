@@ -26,7 +26,7 @@ There are some flaws to the series:
 - It is a horrific universe where horrific things happen with regularity. Be prepared to be shocked by some of the descriptions.
 - There are places where the prose is arguably rough, but I always give that a pass in first-person writing. So long as the grammar is correct, I'm more forgiving when it comes to reading it from the point of view of the protagonist.
 
-In summary, this is a fascinating series in the grimdark genre. Read it if you want dark fantasy set in a high magic world rich with culture, action, and introspection, yet full of torture and murder.
+In summary, this is a fascinating series in the grimdark genre. Read it if you want dark fantasy set in a high magic world rich with culture, action, and introspection, yet full of torture and murder. That is the kind of thing I often really enjoy, which is why I gave it 5 stars.
 
 <a href="https://www.amazon.com/dp/B085DS34NQ?tag=mlinar-20" class="btn btn-primary">Read Obsidian Path on Amazon</a> 
  
