@@ -1,3 +1,4 @@
+import pytz
 import air
 import json
 import pathlib
@@ -18,15 +19,17 @@ markdown = partial(mistletoe.markdown)
 def pretty_date(date: str):
     return datetime.strptime(date, "%Y-%m-%d").strftime("%B %-d, %Y")
 
+
 app = air.Air()
 jinja = air.JinjaRenderer(directory="templates")
 
 HEADER_TAG_TYPES = (air.Header,)
 FOOTER_TAG_TYPES = (air.Footer,)
 
-DOMAIN = 'https://grimdaniel.com'
+DOMAIN = "https://grimdaniel.com"
 
 # TODO add theme color enumerator for muCss
+
 
 def filter_header_tags(tags: tuple) -> list:
     """Given a list of tags, only list the ones that belong in header of an HTML document.
@@ -36,13 +39,15 @@ def filter_header_tags(tags: tuple) -> list:
     """
     return [t for t in tags if isinstance(t, HEADER_TAG_TYPES)]
 
+
 def filter_footer_tags(tags: tuple) -> list:
     """Given a list of tags, only list the ones that belong in footer of an HTML document.
 
     Returns:
         List of tags that belong in the footer of an HTML document.
     """
-    return [t for t in tags if isinstance(t, FOOTER_TAG_TYPES)]    
+    return [t for t in tags if isinstance(t, FOOTER_TAG_TYPES)]
+
 
 def filter_body_tags(tags: tuple) -> list:
     """Given a list of tags, only list the ones that belong in header of an HTML document.
@@ -50,10 +55,20 @@ def filter_body_tags(tags: tuple) -> list:
     Returns:
         List of tags that belong in the header of an HTML document.
     """
-    return [t for t in tags if not isinstance(t, HEADER_TAG_TYPES+HEADER_TAG_TYPES+FOOTER_TAG_TYPES)]
+    return [
+        t
+        for t in tags
+        if not isinstance(t, HEADER_TAG_TYPES + HEADER_TAG_TYPES + FOOTER_TAG_TYPES)
+    ]
 
 
-def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: bool = False, **kwargs) -> air.Html | air.Children:
+def mucss(
+    *children: Any,
+    theme: str = "red",
+    force_dark_mode: bool = False,
+    is_htmx: bool = False,
+    **kwargs,
+) -> air.Html | air.Children:
     """Renders the basic layout with MuCSS and HTMX for quick prototyping.
 
     1. At the top level HTML head tags are put in the `<head>` tag
@@ -121,30 +136,26 @@ def mucss(*children: Any, theme:str='red', force_dark_mode:bool=False, is_htmx: 
 
     return air.Html(
         air.Head(
-            air.Meta(charset='UTF-8'),
-            air.Meta(name='viewport', content='width=device-width, initial-scale=1.0'),
+            air.Meta(charset="UTF-8"),
+            air.Meta(name="viewport", content="width=device-width, initial-scale=1.0"),
             air.Link(
                 rel="stylesheet",
                 href=f"https://unpkg.com/@digicreon/mucss/dist/mu.{theme}.css",
             ),
-            air.Link(
-                rel="stylesheet",
-                href="/static/style.css"
-            ),
+            air.Link(rel="stylesheet", href="/static/style.css"),
             air.Script(
                 src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js",
                 integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm",
                 crossorigin="anonymous",
             ),
             *head_tags,
-        ),    
+        ),
         air.Body(
-            *header_tags,    
+            *header_tags,
             air.Main(*body_tags, class_="container"),
             *footer_tags,
         ),
-                
-        data_theme = 'dark' if force_dark_mode else ''
+        data_theme="dark" if force_dark_mode else "",
     )
 
 
@@ -153,88 +164,110 @@ def Header():
         air.Nav(
             air.Ul(
                 air.Li(
-                    air.A(air.Strong('Grimdaniel'),href='/'),
+                    air.A(air.Strong("Grimdaniel"), href="/"),
                 ),
             ),
             air.Input(
                 hidden=True,
-                type_='checkbox',
-                class_='navbar-toggle',
-                id_='nav-full',
+                type_="checkbox",
+                class_="navbar-toggle",
+                id_="nav-full",
             ),
             air.Label(
-                '☰',
-                for_='nav-full',
-                class_='navbar-burger',
+                "☰",
+                for_="nav-full",
+                class_="navbar-burger",
             ),
             air.Ul(
                 air.Li(
-                    air.A('Home', href='/'),
+                    air.A("Home", href="/"),
                 ),
                 air.Li(
-                    air.A('About', href='/about'),
+                    air.A("About", href="/about"),
                 ),
                 air.Li(
-                    air.A('Books', href='/books'),
-                ),                
+                    air.A("Books", href="/books"),
+                ),
                 air.Li(
-                    air.A('Newsletter', href=newsletter.url()),
-                ),  
+                    air.A("Newsletter", href=newsletter.url()),
+                ),
                 air.Li(
-                    air.A('Reviews', href=reviews.url()),
-                ),                                  
-                class_='navbar-menu',
+                    air.A("Reviews", href=reviews.url()),
+                ),
+                class_="navbar-menu",
             ),
-            class_='container',
+            class_="container",
         ),
-        class_='bg-primary sticky-top',
-    )  
+        class_="bg-primary sticky-top",
+    )
 
 
 @app.page
 def index(request: air.Request):
-    return MarkdownPage('index')
+    return MarkdownPage("index")
 
 
 redirect_items = json.loads(pathlib.Path("redirects.json").read_text())
 
 
-def Footer(title: str, slug: str = ''):
-    dirs = [x for x in slug.split('/')[:-1]]
+def Footer(title: str, slug: str = ""):
+    dirs = [x for x in slug.split("/")[:-1]]
     return air.Footer(
         air.Nav(
             air.Ul(
                 air.Li(
-                    air.A('Home', href='/'),
+                    air.A("Home", href="/"),
                 ),
-                *[air.Li(air.A(x, href=f'/{x}')) for x in dirs],
-                air.Li(title, aria_current='page'),
-                class_='breadcrumb',
+                *[air.Li(air.A(x, href=f"/{x}")) for x in dirs],
+                air.Li(title, aria_current="page"),
+                class_="breadcrumb",
             ),
-            aria_label='Breadcrumb',
-        ),   
+            aria_label="Breadcrumb",
+        ),
         air.P(
             air.Small(air.Raw("&copy;"), "2026 Daniel Roy Greenfeld"),
-        ),     
-        air.P(
-            air.A(air.Img(src='/static/images/goodreads.png'), target="_blank", href='https://goodreads.com/author/show/7426915'),                        
-            ' ',
-            air.A(air.Img(src='/static/images/amazon-author.png'), target="_blank", href='https://www.amazon.com/daniel-roy-greenfeld/e/B00CCSVG7E?tag=mlinar-20'),
-            ' ',            
-            air.A(air.Img(src='/static/images/facebook.png'), target="_blank", href='https://facebook.com/danielfeldroy'),
-            ' ',            
-            air.A(air.Img(src='/static/images/bookbub.svg', height=25, width=25), target="_blank", href='https://www.bookbub.com/profile/daniel-roy-greenfeld'),            
-            ' ',            
-            air.A(air.Img(src='/static/images/booksirens.png', height=25, width=25, class_="borderCircle"), target="_blank", href='https://booksirens.com/author/JVU6Z61/G8DUQLE'),                        
-            ' ',            
-            air.A('Feed: atom.xml', target="_blank", href='/atom.xml'),                                    
-
         ),
-        class_='container'
+        air.P(
+            air.A(
+                air.Img(src="/static/images/goodreads.png"),
+                target="_blank",
+                href="https://goodreads.com/author/show/7426915",
+            ),
+            " ",
+            air.A(
+                air.Img(src="/static/images/amazon-author.png"),
+                target="_blank",
+                href="https://www.amazon.com/daniel-roy-greenfeld/e/B00CCSVG7E?tag=mlinar-20",
+            ),
+            " ",
+            air.A(
+                air.Img(src="/static/images/facebook.png"),
+                target="_blank",
+                href="https://facebook.com/danielfeldroy",
+            ),
+            " ",
+            air.A(
+                air.Img(src="/static/images/bookbub.svg", height=25, width=25),
+                target="_blank",
+                href="https://www.bookbub.com/profile/daniel-roy-greenfeld",
+            ),
+            " ",
+            air.A(
+                air.Img(
+                    src="/static/images/booksirens.png",
+                    height=25,
+                    width=25,
+                    class_="borderCircle",
+                ),
+                target="_blank",
+                href="https://booksirens.com/author/JVU6Z61/G8DUQLE",
+            ),
+            " ",
+            air.A("Feed: atom.xml", target="_blank", href="/atom.xml"),
+        ),
+        class_="container",
     )
 
-
-    
 
 def MarkdownPage(slug: str):
     """Renders a non-sequential markdown file"""
@@ -242,117 +275,160 @@ def MarkdownPage(slug: str):
         content = Frontmatter.read_file(f"pages/{slug}.md")
     except FileNotFoundError:
         raise HTTPException(status_code=404)
-    date = content["attributes"].get("date", "")
     title = content["attributes"].get("title", slug)
-    if title == 'index':
-        title = 'Grimdaniel'
+    if title == "index":
+        title = "Grimdaniel"
     social_title = content["attributes"].get("social_title", title)
-    description = content["attributes"].get("description", '')
+    description = content["attributes"].get("description", "")
     social_description = content["attributes"].get("social_description", description)
-    image = content["attributes"].get("image", 'https://grimdaniel.com/static/images/the-curse.webp')
-    if not image.startswith('https://'):
-        image = f'https://grimdaniel.com{image}'
+    image = content["attributes"].get(
+        "image", "https://grimdaniel.com/static/images/the-curse.webp"
+    )
+    if not image.startswith("https://"):
+        image = f"https://grimdaniel.com{image}"
     twitter_image = content["attributes"].get("twitter_image", image)
-    if not twitter_image.startswith('https://'):
-        twitter_image = f'https://grimdaniel.com{twitter_image}'
+    if not twitter_image.startswith("https://"):
+        twitter_image = f"https://grimdaniel.com{twitter_image}"
     author = content["attributes"].get("author", "")
     text = markdown(content["body"])
-    breadcrumbs = content["attributes"].get("breadcrumbs", [])
     return mucss(
-        air.Meta(name='description', content=social_description),
-        air.Meta(property='og:title', content=social_title),
-        air.Meta(property='og:description', content=social_description),
-        air.Meta(property='og:image', content=image),
-        air.Meta(property='og:type', content='website'),
-        air.Meta(property='og:url', content=f'https://grimdaniel.com/{slug}'),
+        air.Meta(name="description", content=social_description),
+        air.Meta(property="og:title", content=social_title),
+        air.Meta(property="og:description", content=social_description),
+        air.Meta(property="og:image", content=image),
+        air.Meta(property="og:type", content="website"),
+        air.Meta(property="og:url", content=f"https://grimdaniel.com/{slug}"),
         air.Meta(name="twitter:image", content=twitter_image),
-        air.Meta(name='twitter:card', content='summary_large_image'),   
-        air.Meta(name='twitter:site', content="@pydanny"),
-        air.Meta(name='twitter:title', content=social_title),
-        air.Meta(name='twitter:description', content=social_description),     
+        air.Meta(name="twitter:card", content="summary_large_image"),
+        air.Meta(name="twitter:site", content="@pydanny"),
+        air.Meta(name="twitter:title", content=social_title),
+        air.Meta(name="twitter:description", content=social_description),
         air.Title(social_title),
-        air.Link(rel='icon', href='/static/favicon.ico', sizes='any'),
+        air.Link(rel="icon", href="/static/favicon.ico", sizes="any"),
         Header(),
         air.Section(
-            air.H1(title) if title != 'Grimdaniel' else '',
+            air.H1(title) if title != "Grimdaniel" else "",
             air.P(
-                f'by {author}',
-            ) if author else '',
-            air.P(description) if description else '',
-            air.Br() if description else '',
+                f"by {author}",
+            )
+            if author
+            else "",
+            air.P(description) if description else "",
+            air.Br() if description else "",
             air.Div(air.Raw(text)),
         ),
         Footer(title, slug),
         title=title,
         description=content["attributes"].get("description", ""),
-        theme='red',
-        force_dark_mode=True
+        theme="red",
+        force_dark_mode=True,
     )
+
 
 @app.page
 def newsletter():
-    title = 'The Not Dead Yet Newsletter'
+    title = "The Not Dead Yet Newsletter"
     newsletters = sorted(
-        [x for x in pathlib.Path('pages/newsletter/').glob('*.md')
-         if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 1],
-        reverse=True
+        [
+            x
+            for x in pathlib.Path("pages/newsletter/").glob("*.md")
+            if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 1
+        ],
+        reverse=True,
     )
 
-    return mucss(        
+    return mucss(
         Header(),
         air.Title(title),
         air.H1(title),
-        air.Div(air.Raw(markdown("""
+        air.Div(
+            air.Raw(
+                markdown("""
 My newsletter on grimdark fiction is sent out every Friday a few minutes after 11AM GMT. Previous newsletters are listed here a day after mailout.
 Signup and you'll receive FREE access to "[The Curse](/books/the-curse)", prelude to "[Everyone Dies](/books/everyone-dies)." Unsubscribe anytime.
 
-<a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the "Not Dead Yet" Newsletter</a>"""))),
+<a href="/list-signup" class="btn btn-primary" target="_blank">Signup to the "Not Dead Yet" Newsletter</a>""")
+            )
+        ),
         air.H2("Past editions of the newsletter"),
         air.Ol(
-            *[air.Li(air.A(pretty_date(x.stem), href=page_or_redirect.url(slug=f'newsletter/{x.stem}'))) for x in newsletters],
-            reversed=True
+            *[
+                air.Li(
+                    air.A(
+                        pretty_date(x.stem),
+                        href=page_or_redirect.url(slug=f"newsletter/{x.stem}"),
+                    )
+                )
+                for x in newsletters
+            ],
+            reversed=True,
         ),
         Footer(title),
-        theme='red',
-        force_dark_mode=True
+        theme="red",
+        force_dark_mode=True,
     )
+
 
 @app.page
 def reviews():
     title = "Book reviews of other author's works"
-    reviews =  pathlib.Path('pages/reviews/').glob('*.md')
-    return mucss(        
+    reviews = pathlib.Path("pages/reviews/").glob("*.md")
+    return mucss(
         Header(),
         air.Title(title),
         air.H1(title),
         air.Ol(
-            *[air.Li(air.A(Frontmatter.read_file(x)['attributes']['title'].replace('Review: ', ''), href=page_or_redirect.url(slug=f'reviews/{x.stem}'))) for x in reviews]
+            *[
+                air.Li(
+                    air.A(
+                        Frontmatter.read_file(x)["attributes"]["title"].replace(
+                            "Review: ", ""
+                        ),
+                        href=page_or_redirect.url(slug=f"reviews/{x.stem}"),
+                    )
+                )
+                for x in reviews
+            ]
         ),
         Footer(title),
-        theme='red',
-        force_dark_mode=True
+        theme="red",
+        force_dark_mode=True,
     )
+
 
 @app.page
 def redirects():
     return mucss(
         Header(),
         air.Ol(
-            *[air.Li(x,": " , air.A(redirect_items[x], href=redirect_items[x], target='_blank')) for x in redirect_items]
+            *[
+                air.Li(
+                    x,
+                    ": ",
+                    air.A(redirect_items[x], href=redirect_items[x], target="_blank"),
+                )
+                for x in redirect_items
+            ]
         ),
-        Footer('Redirects'),
-        theme='red',
-        force_dark_mode=True
-    )        
+        Footer("Redirects"),
+        theme="red",
+        force_dark_mode=True,
+    )
 
 
 @app.get("/robots.txt")
 def robots_txt(request: air.Request):
-    return air.responses.PlainTextResponse(pathlib.Path('templates/robots.txt').read_text())
+    return air.responses.PlainTextResponse(
+        pathlib.Path("templates/robots.txt").read_text()
+    )
+
 
 @app.get("/sitemap.xml")
 def sitemap_xml(request: air.Request):
-    return air.responses.PlainTextResponse(pathlib.Path('templates/sitemap.xml').read_text())
+    return air.responses.PlainTextResponse(
+        pathlib.Path("templates/sitemap.xml").read_text()
+    )
+
 
 def convert_dtstr_to_dt(date_str):
     """
@@ -375,25 +451,29 @@ def convert_dtstr_to_dt(date_str):
         print(f"Error parsing date string: {e}")
         return None
 
-@app.get('/atom.xml')
+
+@app.get("/atom.xml")
 def atom_feed():
     newsletters = sorted(
-        [x for x in pathlib.Path('pages/newsletter/').glob('*.md')
-         if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 1],
-        reverse=True
+        [
+            x
+            for x in pathlib.Path("pages/newsletter/").glob("*.md")
+            if (datetime.now() - datetime.strptime(x.stem, "%Y-%m-%d")).days >= 1
+        ],
+        reverse=True,
     )
     fg = FeedGenerator()
-    fg.id(DOMAIN)    
+    fg.id(DOMAIN)
     fg.author(
         {
             "name": "Daniel Roy Greenfeld",
             "email": "notdeadyet@grimdaniel.com",
             "uri": DOMAIN,
         }
-    )    
+    )
     fg.link(href=DOMAIN, rel="alternate")
     fg.rights(f"All rights reserved {datetime.now().year}, Daniel Roy Greenfeld")
-    fg.language("en")    
+    fg.language("en")
     fg.title("Grimdaniel isn't dead yet")
     fg.atom_str(pretty=True)
     for newsletter in newsletters:
@@ -402,50 +482,62 @@ def atom_feed():
         metadata = content["attributes"]
         linker = f"{DOMAIN}{str(newsletter)[5:-3]}"
         fe.id(linker)
-        fe.link(href=linker)        
+        fe.link(href=linker)
         print(linker)
         fe.title(str(metadata["title"]))
-        fe.summary(metadata.get("description"))        
-        fe.content(markdown(content['body']), type="html")
+        fe.summary(metadata.get("description"))
+        fe.content(markdown(content["body"]), type="html")
         fe.author([{"name": "Daniel Roy Greenfeld", "email": "daniel@feldroy.com"}])
         fe.pubDate(convert_dtstr_to_dt(metadata["date"]))
-        fe.updated(convert_dtstr_to_dt(metadata["date"]))        
+        fe.updated(convert_dtstr_to_dt(metadata["date"]))
 
-    return air.responses.Response(content=fg.atom_str(pretty=True),media_type="application/xml")
+    return air.responses.Response(
+        content=fg.atom_str(pretty=True), media_type="application/xml"
+    )
 
 
 def Banner(banner):
     return air.P(
         air.A(
-            air.Img(src=banner['src'], class_='redline', style="height: auto; display: block; margin: auto;"),
-            rel="noopener noreferrer", target="_blank", href=banner['href']
+            air.Img(
+                src=banner["src"],
+                class_="redline",
+                style="height: auto; display: block; margin: auto;",
+            ),
+            rel="noopener noreferrer",
+            target="_blank",
+            href=banner["href"],
         ),
     )
+
 
 @app.page
 def banners():
     banners = []
-    for banner in json.loads(pathlib.Path('banners.json').read_text())['banners']:
-        if banner['src'] == 'xxxxx': 
+    for banner in json.loads(pathlib.Path("banners.json").read_text())["banners"]:
+        if banner["src"] == "xxxxx":
             continue
-        if (datetime.strptime(banner['start'], "%Y-%m-%d") - datetime.now()).days > 0:
+        if (datetime.strptime(banner["start"], "%Y-%m-%d") - datetime.now()).days > 0:
             continue
-        if (datetime.now() - datetime.strptime(banner['end'], "%Y-%m-%d")).days > 0:
-            continue        
+        if (datetime.now() - datetime.strptime(banner["end"], "%Y-%m-%d")).days > 0:
+            continue
         banners.append(banner)
 
     shuffle(banners)
-    return mucss(        
+    return mucss(
         Header(),
-        air.Title('Banners'),
-        air.H1('Banners'),
-        air.P('A random assortment of banners for promotions my books are in. Please click on the top image!'),
-        *[Banner(b) for b in banners],   
+        air.Title("Banners"),
+        air.H1("Banners"),
+        air.P(
+            "A random assortment of banners for promotions my books are in. Please click on the top image!"
+        ),
+        *[Banner(b) for b in banners],
         # [print(x) for x in banners],
-        Footer('Banners'),
-        theme='red',
-        force_dark_mode=True
-    )    
+        Footer("Banners"),
+        theme="red",
+        force_dark_mode=True,
+    )
+
 
 @app.get("/{slug:path}")
 async def page_or_redirect(slug: str):
