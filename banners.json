@@ -57,8 +57,8 @@
         {
             "href": "https://storyoriginapp.com/to/OM7XjIC",
             "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
+            "start": "2026-06-01",
+            "end": "2026-06-30"
         },
         {
             "href": "https://storyoriginapp.com/to/SNoyELl",
@@ -81,8 +81,8 @@
         {
             "href": "https://books.bookfunnel.com/darkwithspice/yo7n1zzoe9",
             "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
+            "start": "2026-06-01",
+            "end": "2026-06-30"
         },
         {
             "href": "https://books.bookfunnel.com/vibereviewsdarkfantasy/ojelahnkkr",
@@ -95,36 +95,7 @@
             "src": "https://images.bookfunnel.com/headers/298d939bc1c5809e87e2e455e3250c99a0a40b16c27ca376111f8979a93f7046.jpg",
             "start": "2026-06-15",
             "end": "2026-07-13"
-        },
-        {
-            "href": "xxxxx",
-            "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
-        },
-        {
-            "href": "xxxxx",
-            "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
-        },
-        {
-            "href": "xxxxx",
-            "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
-        },
-        {
-            "href": "xxxxx",
-            "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
-        },
-        {
-            "href": "xxxxx",
-            "src": "xxxxx",
-            "start": "2026-06-xx",
-            "end": "2026-06-xx"
         }
+
     ]
 }

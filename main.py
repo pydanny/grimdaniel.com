@@ -516,12 +516,12 @@ def Banner(banner):
 def banners():
     banners = []
     for banner in json.loads(pathlib.Path("banners.json").read_text())["banners"]:
-        if banner["src"] == "xxxxx":
-            continue
         if (datetime.strptime(banner["start"], "%Y-%m-%d") - datetime.now()).days > 0:
             continue
         if (datetime.now() - datetime.strptime(banner["end"], "%Y-%m-%d")).days > 0:
             continue
+        if banner["src"] == "xxxxx":
+            continue        
         banners.append(banner)
 
     shuffle(banners)
@@ -530,9 +530,53 @@ def banners():
         air.Title("Banners"),
         air.H1("Banners"),
         air.P(
-            "A random assortment of banners for promotions my books are in. Please click on the top image!"
+            "A random assortment of banners for promotions my books are in. Refresh the page to randomize the images. Please click on whatever is the top image!"
         ),
         *[Banner(b) for b in banners],
+        Footer("Banners"),
+        theme="red",
+        force_dark_mode=True,
+    )
+
+def Promo(promo):
+    return air.Li(
+        air.A(
+            promo["href"],
+            rel="noopener noreferrer",
+            target="_blank",
+            href=promo["href"],
+        ),
+        air.Br() if promo["src"] != 'xxxxx' else '',
+        air.A('banner',href=promo["src"]) if promo["src"] != 'xxxxx' else '',
+        air.Br(),
+        air.P(f'{promo["start"]} to {promo["end"]}')
+    )
+
+@app.page
+def promos():
+    promos = []
+    for promo in json.loads(pathlib.Path("banners.json").read_text())["banners"]:
+        if (datetime.strptime(promo["start"], "%Y-%m-%d") - datetime.now()).days > 0:
+            continue
+        if (datetime.now() - datetime.strptime(promo["end"], "%Y-%m-%d")).days > 0:
+            continue        
+        promos.append(promo)
+
+    promos = sorted(
+        promos,
+        key=lambda item: item["start"]
+    )
+
+    return mucss(
+        Header(),
+        air.Title("Promos"),
+        air.H1("Promos"),
+        air.P(
+            "The list of promotions my books are in start date order."
+        ),        
+        air.Ol(
+            *[Promo(p) for p in promos],
+        ),
         Footer("Banners"),
         theme="red",
         force_dark_mode=True,
