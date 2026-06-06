@@ -527,8 +527,8 @@ def banners():
     shuffle(banners)
     return mucss(
         Header(),
-        air.Title("Banners"),
-        air.H1("Banners"),
+        air.Title(f"Banners ({len(banners)})"),
+        air.H1(f"Banners ({len(banners)})"),
         air.P(
             "A random assortment of banners for promotions my books are in. Refresh the page to randomize the images. Please click on whatever is the top image!"
         ),
@@ -569,8 +569,8 @@ def promos():
 
     return mucss(
         Header(),
-        air.Title("Promos"),
-        air.H1("Promos"),
+        air.Title(f"Promos ({len(promos)})"),
+        air.H1(f"Promos ({len(promos)})"),
         air.P(
             "The list of promotions my books are in start date order."
         ),        
