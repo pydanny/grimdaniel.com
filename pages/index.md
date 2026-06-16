@@ -38,6 +38,8 @@ Everyone dies.
 
 A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
+### Remarks from Amazon reviews
+
 "Even the doom feels… cozy?"<br>
 -- Danni
 
@@ -46,6 +48,9 @@ A grimdark fantasy for adult readers containing violence, betrayal, and despair.
 
 "This is one of those rare fantasy novels that feels both epic and personal even in its short length."<br>
 --Fina
+
+"I don't have enough stars to rate this book. 10/10 highly recommend."<br>
+--Bethany Salas
 
 <a class="btn btn-primary" href="/read-everyone-dies" target="_blank">Read on Amazon</a>
 
