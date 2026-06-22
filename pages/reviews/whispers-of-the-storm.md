@@ -1,6 +1,6 @@
 ---
 title: "Review: Whispers of the Storm"
-description: The start of something dreadful. ⭐⭐⭐⭐⭐
+description: The start of something dreadful. ⭐⭐⭐⭐
 date: 2026-06-22
 image: "/static/books/whispers-of-the-storm.jpg"
 twitter_image: "/static/books/whispers-of-the-storm.jpg"
