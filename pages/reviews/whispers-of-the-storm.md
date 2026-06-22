@@ -46,7 +46,6 @@ As always, there are some flaws I should mention:
 - Early on, there were some unnecessary characters, although I have wondered if they'll have some import in the sequel
 - Martial arts nitpick: There is a use of reverse grip in swordfighting. Reverse grip is a trope in stage and film, but anyone who has done any swordfight sparring in any sport or martial art will tell you holding a sword this way is ineffective. This use of reverse grip felt a bit wrong in a book that otherwise espoused realism of action
 
-
 <a href="https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20" class="btn btn-primary">Read Whispers of the Storm on Amazon</a> 
 
 </div>
