@@ -31,3 +31,5 @@ As someone who has trained in weapons combat over the years (FMA, fencing, kendo
 If there's a flaw I can point out, there's a few places where the book switches from third-person point of view to first person. This is jarring, especially considering that the book is written in such a stylized manner.
 
 In summary, this was an interesting book.
+
+</div>
