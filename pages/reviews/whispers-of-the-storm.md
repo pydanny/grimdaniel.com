@@ -44,7 +44,7 @@ As always, there are some flaws I should mention:
 
 - The descriptions were often sparse. There could be a bit more narration of how things appear to the senses. Not long paragraphs, but rather a sentence here or there, would really help the reader paint the story in their head
 - Building off the sparse descriptions, the world-building was too light. Again, an sentence or two for description would probably help remove this feeling 
-- Martial arts nitpick: There is a use of reverse grip in swordfighting. Reverse grip is a trope in stage and film, but anyone who has done any swordfight sparring in any sport or martial art will tell you holding a sword this way is ineffective. This use of reverse grip felt a bit wrong in a book that otherwise espoused realism of action
+- Martial arts nitpick: There is a use of reverse grip in swordfighting. Reverse grip is a trope in stage and film, but anyone who has done any swordfight sparring in any sport or martial art will tell you holding a sword this way is grossly ineffective. This use of reverse grip felt a bit wrong in a book that otherwise espoused realism of action
 
 <a href="https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20" class="btn btn-primary">Read Whispers of the Storm on Amazon</a> 
 
