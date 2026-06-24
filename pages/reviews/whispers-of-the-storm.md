@@ -11,7 +11,7 @@ twitter_image: "/static/books/whispers-of-the-storm.jpg"
 <div class="col-3">
     <figure>
     <a href="https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20">
-        <img src="/static/books/whispers-of-the-storm.jpg" >
+        <img src="/static/books/whispers-of-the-storm.jpg" class="redline" >
     </a>
     </figure>
 
@@ -20,7 +20,7 @@ twitter_image: "/static/books/whispers-of-the-storm.jpg"
 
 ## Journey into a dark soul
 
-I discovered "Whispers of the Storm" when a couple of authors with huge followings mentioned it in their social media feeds. As a fan of indie works, I was immediately interested.
+I discovered "[Whispers of the Storm](https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20)" when a couple of authors with huge followings mentioned it in their social media feeds. As a fan of indie works, I was immediately interested.
 
 "Whispers of the Storm" opens with the protagonist, Redlin of the Wolves, telling his story as he makes his way to his own execution for crimes he admits are dreadful. It's an interesting trick, helping to cover that the story begins in a magic academy. Technically, that makes this book (first in a series) a coming-of-age story, except this isn't Hogwarts. Rather, Eilen (the school) is a place where students are periodically subjected to tests that can see them killed, maimed, or simply give up. Almost none of the characters, student or teacher, are innocent of lying, cheating, and worse. When the protagonist and other survivors of the school leave the school, this pattern doesn't change. It's a dark, cruel world where life is cheap, fitting of the grimdark label.
 
