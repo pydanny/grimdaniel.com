@@ -1,6 +1,6 @@
 ---
 title: "Review: Whispers of the Storm"
-description: The beginning of dark series. ⭐⭐⭐⭐
+description: The beginning of dark series. ⭐⭐⭐⭐½
 date: 2026-06-22
 image: "/static/books/whispers-of-the-storm.jpg"
 twitter_image: "/static/books/whispers-of-the-storm.jpg"
@@ -43,7 +43,7 @@ I won't give spoilers. The book also covers the beginning of the repercussions o
 As always, there are some flaws I should mention:
 
 - The descriptions were often sparse. There could be a bit more narration of how things appear to the senses. Not long paragraphs, but rather a sentence here or there, would really help the reader paint the story in their head
-- Early on, there were some unnecessary characters, although I have wondered if they'll have some import in the sequel
+- Building off the sparse descriptions, the world-building was too light. Again, an sentence or two for description would probably help remove this feeling 
 - Martial arts nitpick: There is a use of reverse grip in swordfighting. Reverse grip is a trope in stage and film, but anyone who has done any swordfight sparring in any sport or martial art will tell you holding a sword this way is ineffective. This use of reverse grip felt a bit wrong in a book that otherwise espoused realism of action
 
 <a href="https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20" class="btn btn-primary">Read Whispers of the Storm on Amazon</a> 
