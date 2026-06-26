@@ -10,7 +10,7 @@ twitter_image: "/static/books/whispers-of-the-storm.jpg"
 
 <div class="col-3">
     <figure>
-    <a href="https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20">
+    <a href="https://books2read.com/u/3n69G8">
         <img src="/static/books/whispers-of-the-storm.jpg" class="redline" >
     </a>
     </figure>
@@ -20,7 +20,7 @@ twitter_image: "/static/books/whispers-of-the-storm.jpg"
 
 ## Journey into a dark soul
 
-I discovered "[Whispers of the Storm](https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20)" when a couple of authors with huge followings mentioned it in their social media feeds. As a fan of indie works, I was immediately interested.
+I discovered "[Whispers of the Storm](https://books2read.com/u/3n69G8)" when a couple of authors with huge followings mentioned it in their social media feeds. As a fan of indie works, I was immediately interested.
 
 "Whispers of the Storm" opens with the protagonist, Redlin of the Wolves, telling his story as he makes his way to his own execution for crimes he admits are dreadful. It's an interesting trick, helping to cover that the story begins in a magic academy. Technically, that makes this book (first in a series) a coming-of-age story, except this isn't Hogwarts. Rather, Eilen (the school) is a place where students are periodically subjected to tests that can see them killed, maimed, or simply give up. Almost none of the characters, student or teacher, are innocent of lying, cheating, and worse. When the protagonist and other survivors of the school leave the school, this pattern doesn't change. It's a dark, cruel world where life is cheap, fitting of the grimdark label.
 
@@ -46,6 +46,6 @@ As always, there are some flaws I should mention:
 - Building off the sparse descriptions, the world-building was too light. Again, an sentence or two for description would probably help remove this feeling 
 - Martial arts nitpick that doesn't affect the score: There is a use of reverse grip in swordfighting. Reverse grip is a trope in stage and film, but anyone who has done any swordfight sparring in any sport or martial art will tell you holding a sword this way is grossly ineffective. This use of reverse grip felt a bit wrong in a book that otherwise espoused realism of action
 
-<a href="https://www.amazon.com/Whispers-Storm-Song-Damned-Book-ebook/dp/B0DPLWZC48/?tag=mlinar-20" class="btn btn-primary">Read Whispers of the Storm on Amazon</a> 
+<a href="https://books2read.com/u/3n69G8" class="btn btn-primary">Read Whispers of the Storm on Amazon</a> 
 
 </div>
