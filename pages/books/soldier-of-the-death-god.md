@@ -81,13 +81,13 @@ The street gangs are allowed to exist because they serve a purpose. The Lich Que
 
 In any case, my wife was right: the ruffians were pushing boundaries even here in the grand market square under the shadow of the Lich Queen's tallest tower. Competing gangs worked the merchants, forcing the hard-working vendors to pay different groups to avoid trouble. That was against the unspoken rule where gangs could not overlap, which meant too many young men were not joining the legions. I would need to reduce the gangs again.
 
-
-
-I looked forward to the mothers of ruffians' screams. Where was their compassion when their sons were hurting the city in which they had been raised? Such is justice.
+I stifled an internal sigh. Before I reduced the gangs again I would need to talk to one of their leaders, Balchor. We had attended the Ashen Spire together, and he had competed with me for the affections of Nekra. While I had completed my education there, he had left in anger.
 
 
 
-I took wrapped meat and egg from Mrs. Graves and walked my children to the base of the Ashen Spire on the edge of the square. Like the ruffians, my children are pushing boundaries, but that is what teenagers do. They walk into the dark gate without a farewell. I shrug, they will come around in a few years.
+Mrs. Graves snapped her fingers impatiently at me. I took the freshly cooked wrapped meat and egg from her. I walked my children to the edge of the square, where the gate into Ashen Spire stood. 
+
+My children walked in without even a farewell. Like the ruffians, my children are pushing boundaries. I suppose that is what teenagers do, even if their father is a Dark Captain serving the greatest ruler in history. I shrug, they will come around in a few years.
 
 
 
