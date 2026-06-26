@@ -1,9 +1,19 @@
 ---
 title: "Soldier of the Death God"
-description: "In-progress sequel to Everyone Dies"
+description: "Sequel to Everone Dies"
 author: Daniel Roy Greenfeld
 order: 0
 ---
+
+_This is a rough draft of the first chapter of "Soldier of the Death God". If you want to read the chapters as they are readied for the final book, consider joining my [Beta Readers club](https://storyoriginapp.com/betacopies/019f016b-e968-7eff-bb4e-9c95cd0a9e5b)._
+
+## Blurb
+
+_Cryptus is a Dark Captain in service to the Lich Queen. A loyal vassal and righteous worshipper of the Elemental God of Death, he has been amply rewarded for his service with title, property, and happy family.  His rigid moral code defines him as much as the dreaded necromancy he wields._
+
+_Can Cryptus' rigid moral code survive when the Lich Queen is defeated and everything he knows falls apart?_
+
+_This is a story of violence, betrayal, and despair._
 
 ## Chapter 1: Cryptus
 
@@ -106,5 +116,5 @@ Fear.
 Her Dark Majesty is afraid.
 
 
-<a class="btn btn-primary" href="https://storyoriginapp.com/betacopies/019f016b-e968-7eff-bb4e-9c95cd0a9e5b">Join the Beta Readers</a>
+<a class="btn btn-primary" href="https://storyoriginapp.com/betacopies/019f016b-e968-7eff-bb4e-9c95cd0a9e5b">Join the Beta Readers club</a>
 
