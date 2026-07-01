@@ -105,7 +105,7 @@ _ASSIST ME!_
 
 
 
-The psychic voice of the Lich Queen slams into my head with enough force to drive me to my knees. The power of the sending is such that I know every Dark Captain has received it. And through the connection, I feel an emotion I never imagined she could feel.
+The psychic voice of the Lich Queen slammed into my head with enough force to drive me to my knees. The power of the sending is such that I know every Dark Captain has received it. And through the connection, I felt an emotion I never imagined she could feel.
 
 
 
@@ -113,7 +113,7 @@ Fear.
 
 
 
-Her Dark Majesty is afraid.
+Her Dark Majesty was afraid.
 
 
 <a class="btn btn-primary" href="https://storyoriginapp.com/betacopies/019f016b-e968-7eff-bb4e-9c95cd0a9e5b">Join the Beta Readers club</a>
