@@ -69,7 +69,9 @@ I led the way, walking at a stately pace, my children walking beside me. I was e
 
 
 
-We walked to my children's school through the narrow streets of Necropolis, passing shops and the homes above them, as well as the inevitable temples and columbaria, where the remains of the undead worked to dust, and ashes are kept. As we approach the ashen spire that is second in height to only the Lich Queen's massive bone tower in the center of the city, we passed through the grand square of the city. Merchants hawk their wares from a hundred stalls, buskers try to convince the hard-working people of the city to part with their coin, artists work on easels, and the walking dead keep everything clean.
+We walked to my children's school up the narrow streets of Necropolis, passing shops and the homes above them, as well as the inevitable temples and columbaria, where the remains of the undead worked to dust, and ashes are kept. Our path was uphill, for Necropolis is built on a great hill riddled with subterranean passages and crypts.
+
+As we approached the Ashen Spire that is second in height to only the Lich Queen's massive bone tower in the center of the city, we passed through the grand square of the city. Merchants hawked their wares from a hundred stalls, buskers tried to convince the hard-working people of the city to part with their coin, artists worked on easels, and the walking dead kept everything clean and did the hard labor.
 
 
 
@@ -114,7 +116,6 @@ Fear.
 
 
 Her Dark Majesty was afraid.
-
 
 <a class="btn btn-primary" href="https://storyoriginapp.com/betacopies/019f016b-e968-7eff-bb4e-9c95cd0a9e5b">Join the Beta Readers club</a>
 
