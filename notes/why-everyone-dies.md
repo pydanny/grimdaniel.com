@@ -2,7 +2,7 @@
 title: Why "Everyone Dies"?
 slug: why-everyone-dies
 date: 2026-08-18
-published: false
+published: true
 kind: note
 description: 
 ---
