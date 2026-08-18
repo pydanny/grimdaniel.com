@@ -1,6 +1,6 @@
 ---
 title: Not Dead Yet Newsletter #1
-slug: not-dead-yet-newsletter
+slug: not-dead-yet-newsletter-1
 date: 2026-03-10
 published: false
 kind: letter
