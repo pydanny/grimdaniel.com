@@ -1,0 +1,117 @@
+---
+title: Not Dead Yet Newsletter #1
+slug: not-dead-yet-newsletter-1
+date: 2026-08-18
+published: false
+kind: letter
+description: 
+---
+
+## April 10, 2026
+
+Hey there,
+
+I'm not dead yet. Unlike the unfortunate characters in my stories, I'm alive and writing. As you may know, I write fantasy in the grimdark genre.
+
+Years ago I co-wrote a book where the protagonist died at the end. We resurrected him in the second book of the series. I have always wondered if that was a mistake. That the first book should have been the end of it. The protagonist was willing to pay the ultimate price to save his friends, but in the end did he actually pay it if he came back?
+
+Thus came the idea for "Everyone Dies". The expectation from the beginning is death. The deaths of all the characters is set in stone. As much as I have gotten attached to some of the characters, by the end of the book they all have to die.
+
+On May 20th, "Everyone Dies" will be published on Amazon. However, you can [request a free advance review copy](/arc), if you are willing to write a review I'll send you a copy.
+
+---
+
+### May 20th: "Everyone Dies"
+
+<div class="row">
+
+<div class="col-3">
+<figure>
+<a target="_blank" href="/arc"><img src="/static/images/everyone-dies.webp" ></a>
+</figure>
+
+</div>
+<div class="col-9">
+
+They travel together, bound by circumstance, loyalty, and fragile hope. But their fates are already sealed. Because in the end... **Everyone dies.**
+
+A grimdark fantasy for adult readers containing violence, betrayal, and despair.
+
+**Releasing May 20, 2026 on Amazon**
+
+*If you want to read "Everyone Dies" for free, you can request an advance review copy now. In return, please write a review for the book when it launches on May 20th.*
+
+<a class="btn btn-primary" href="/arc">Request a free advanced review copy</a>
+
+</div>
+</div>
+
+<hr>
+
+If you've already read "Everyone Dies": **thank you**. If you haven't, now's the time. And if you know someone who likes dark fantasy stories that doesn't hesitate to murder characters, forward this mail. It helps more than you know.
+
+---
+
+<hr>
+
+### June 19th: Sequel to "Everyone Dies"
+
+While I've been shaping the final edges of "Everyone Dies" for its release on Amazon on May 20th, I've also I’ve also begun carving into its sequel. This is the story about the cost of survival, where the coin is betrayal and murder . If "Everyone Dies" was about, well, everyone dying, the sequel is how someone is willing to spend other people's lives so they can keep on living.
+
+One I'm covering in the story is the potential for using necromancy to build rather than destroy. Specifically, how a necropolitan society might use the undead to perform hard labor, thus making the life of the living easier. Then the question arises of how over time would the labor ranks of undead be filled? This topic will be covered in the sequel to "Everyone Dies".
+
+
+
+
+
+
+## Other books you might like
+
+I've been diving into other authors whose work inspire my own writing. These aren't necessarily grimdark but at least share themes with it.
+
+<div class="row">
+
+<div class="col-4">
+<figure>
+<a href="https://storyoriginapp.com/swaps/589e3a4a-3485-11f1-8106-db5164550647" target="_blank"><img src="/static/newsletters/blood-in-the-stone.jpg"></a>
+</figure>
+
+</div>
+
+<div class="col-4">
+<figure>
+<a href="https://storyoriginapp.com/swaps/67081d7a-3265-11f1-8ff2-9bd5e85426e7" target="_blank"><img src="/static/newsletters/lords-of-the-world.jpg"></a>
+</figure>
+
+</div>
+<div class="col-4">
+<figure>
+<a href="https://storyoriginapp.com/universalbooklinks/25ac221e-32be-11f1-9027-0786a1c426b8" target="_blank"><img src="/static/newsletters/kostya.jpg"></a>
+</figure>
+
+</div>
+</div>
+
+<hr>
+
+<figure>
+<a href="https://storyoriginapp.com/to/2Yxy4AK"  target="_blank"><img src="/static/newsletters/fiction-giveawaybanner.jpg"></a>
+</figure>
+
+<hr>
+
+<figure>
+<a href="https://storyoriginapp.com/to/eXEI1Bl"  target="_blank"><img src="/static/newsletters/free-sci-fantasy.jpg"></a>
+</figure>
+
+---
+
+Thanks for listening!
+
+Daniel Roy Greenfeld
+
+---
+
+## Haven't signed up yet? 
+
+If you like this newsletter preview and haven't subscribed yet, consider <a href="/list-signup" target="_blank">signing up</a>!
