@@ -1,0 +1,15 @@
+{
+  "content_paths": {
+    "article": "articles",
+    "letter": "",
+    "note": "notes"
+  },
+  "schema_version": 1,
+  "site": {
+    "about": "Based in London and Manila, Daniel Roy Greenfeld is the Amazon best-selling co-author of non-fiction web development books. He has given keynote speeches at numerous academic and professional software conferences around the world. Daniel has worked for NASA. He has authored many popular open-source utility libraries, which are in production use by thousands of organizations, including Fortune 500 companies. He is a husband and a father.\r\n\r\nHe has decided to make the leap from non-fiction to fantasy and science-fiction writing. Long has he wanted to write stories set in exciting settings where characters die like fruitflies. He often writes dark stories in the vein of Joe Abercrombie, Mark Lawrence, Michael R. Fletcher, and Anna Smith Spark.\r\n\r\nFor inspiration he draws on decades of reading fiction and researching history and science. Supplementing this is years of weapons combat training in Kendo, fencing, FMA, and HEMA. He has a blue belt in Brazilian Jiu-Jitsu, a third-degree black belt in Tae Kwon Do, and did seven years of classes in both Muay Thai and Capoeira. He's also spent a fair amount of time riding horses and loves any vehicle that flies.",
+    "display_name": "Daniel Roy Greenfeld",
+    "hostname": "daniel.writerstead.com",
+    "tagline": "Fantasy and Science Fiction Author"
+  },
+  "theme_path": "theme"
+}

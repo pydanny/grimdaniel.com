@@ -1,0 +1,9 @@
+{
+  "newsletter": {
+    "enabled": false,
+    "from_email": "updates@daniel.writerstead.com",
+    "provider": null,
+    "reconnect_required": false
+  },
+  "schema_version": 1
+}

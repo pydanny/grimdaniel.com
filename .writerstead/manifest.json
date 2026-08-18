@@ -1,0 +1,11 @@
+{
+  "managed_paths": {
+    "appearance": ".writerstead/appearance.json",
+    "books": ".writerstead/books/",
+    "covers": "assets/covers/",
+    "integrations": ".writerstead/integrations.json",
+    "redirects": ".writerstead/redirects.json",
+    "site": ".writerstead/site.json"
+  },
+  "schema_version": 1
+}
