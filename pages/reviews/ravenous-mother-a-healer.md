@@ -31,6 +31,7 @@ If there's a flaw I can point out, there's one scene where he is talking to a fa
 In summary, this is a fascinating and excellent read in the grimdark genre. I look forward to more from the author.
 
 <a href="https://kendiro.com/books.html#healer" class="btn btn-primary" target="_blank">Buy "A Healer" on Amazon</a>
+<a href="https://kendiro.com/books/a-healer.html" class="btn btn-secondary" target="_blank">Visit the author's website</a>
 
 </div>
 </div>
