@@ -1,12 +1,12 @@
 ---
+id: "d69f25be-af6f-49a5-8cb9-6eb3059b7023"
 title: "ICEWIND DALE: RIME OF THE FROSTMAIDEN | FROST AND TREACHERY"
-slug: icewind-dale-rime-of-the-frostmaiden-frost-and-treachery
-date: 2026-09-02
-published: true
-kind: article
+slug: "icewind-dale-rime-of-the-frostmaiden-frost-and-treachery"
+kind: "article"
 description: ""
+published: true
+date: "2026-09-02T12:27:07.334000+00:00"
 ---
-
 Hello! I'm Daniel, also known as DRG, and I'm a professional Dungeon Master with nearly four decades of experience behind the screen.
 
 I'm currently opening several seats in my Forgotten Realms campaigns, including three spots in Icewind Dale: Rime of the Frostmaiden.
