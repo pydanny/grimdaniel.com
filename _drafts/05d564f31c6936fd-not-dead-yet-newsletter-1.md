@@ -1,12 +1,12 @@
 ---
-title: Not Dead Yet Newsletter #1
-slug: not-dead-yet-newsletter-1
-date: 2026-03-10
+id: "062364e5-f6a6-4d47-9ae9-47650a91cf0c"
+title: "Not Dead Yet Newsletter #1"
+slug: "not-dead-yet-newsletter-1"
+kind: "newsletter"
+description: ""
 published: false
-kind: letter
-description: 
+date: "2026-03-10T00:00:00+00:00"
 ---
-
 ## April 10, 2026
 
 Hey there,
